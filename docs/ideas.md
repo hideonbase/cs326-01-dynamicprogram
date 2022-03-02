@@ -1,6 +1,6 @@
 Team name: 01-dynamicprogram
 
-Application name: 326bnb
+Application name: Amherst bnb
 
 Team Overview:
 member: Jianye Nie, Heng Huang
