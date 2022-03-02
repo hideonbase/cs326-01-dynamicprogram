@@ -3,7 +3,7 @@ Team name: 01-dynamicprogram
 Application name: Amherst bnb
 
 Team Overview:
-member: Jianye Nie, Heng Huang
+member: Jianye Nie, Heng Huang, Junming Li
 
 Github Username: hideonbase HengHuang123
 
