@@ -1,0 +1,162 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    background: scroll url("../imgs1/keYNxyjMVw_small.jpg")20% -60px / 100% 150% no-repeat;
+    height:700px;
+    background-position: center;
+}
+
+.header {
+    background: scroll url("../imgs1/apartments.jpg") 50% -30px / 100% 900% no-repeat;
+
+    height: 50px;
+}
+
+.header-top {
+    color: white;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    align-items: center;
+    height: 50px;
+}
+
+.header-top :link, .header-top :visited {
+    color: white;
+    text-decoration: none;
+}
+
+.header .brand-text {
+    font-size: 32px;
+    font-weight: 900;
+    margin-right: 64px;
+    margin-left: 8px;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-grow: 1;
+    padding-right: 8px;
+    font-size: 14px;
+}
+
+.header .nav *:nth-of-type(3) {
+    margin-left: auto;
+}
+
+.signup{
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    background: #fff;
+    margin:10% auto 0;
+    padding: 50px;
+    margin-left: 20%;
+    text-align:center;
+}
+
+.signup h{
+    color:darkcyan;
+    position: center;
+    font-weight: bold;
+    font-size:200%;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#diao{
+    cursor:pointer;
+}
+
+.input{
+    border-radius: 20px;
+    margin:5px;
+    padding:15px;
+    width:80%;
+    outline:none;
+    border: 2px solid #222;
+}
+
+
+.agree{
+    border-radius: 20px;
+    padding:10px;
+    width:80%;
+    outline:none;
+    font-size:20px;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    background-color: black;
+}
+
+
+.signupwithwechat{
+    border-radius: 20px;
+    padding:10px;
+    width:80%;
+    outline:none;
+    font-size:20px;
+    color:#000000;
+    background-color: #FAEBD7;
+    border:none;
+    cursor:pointer;
+}
+
+a{
+    text-decoration :none ;
+}
+
+hr{
+    margin-top:20px;
+    width:90%;
+}
+
+.o{
+    background-color: #fff;
+    width:100px;
+    margin: -19px auto 10px;
+}
+
+footer .note-section {
+    margin-top: 15%;
+    padding:50px 0;
+    color:#f0f9ff;
+    background-color:#282d32;
+
+}
+.note-section h2{
+    margin-left: 27%;
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:30px;
+}
+.note-section ul{
+    margin-left: 15%;
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+}
+.note-section ul a{
+    margin-left: 15%;
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+}
+
+.note{
+    text-align: center;
+}
+.copyright{
+    margin-top:-30px;
+    text-align:center;
+    padding-top:24px;
+    opacity:0.2;
+    font-size:11px;
+}
+
