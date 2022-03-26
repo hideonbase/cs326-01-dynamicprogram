@@ -25,3 +25,6 @@ We definitely  need a login system.
 <img width="960" alt="c33162d61103f08ca8e231d91e738bc" src="https://user-images.githubusercontent.com/90345005/160194096-7cc06a57-fba0-49d4-b557-9f8fb10e36f4.png">
 <img width="960" alt="6a1e5118b9b1649867aa7be9e3254fe" src="https://user-images.githubusercontent.com/90345005/160194187-275846ce-f11f-4334-9ac6-17e77a1fbdad.png">
 
+One of the four web page content, including the specific floor plan of each apartment.
+![ShowEX1](https://user-images.githubusercontent.com/78442520/160244841-97c320e4-f9f1-4f10-9b42-62f65e5bd5c4.PNG)
+![ShowEx2](https://user-images.githubusercontent.com/78442520/160244864-4e5ad003-0a99-4f5b-93d9-83da75e87d91.PNG)
