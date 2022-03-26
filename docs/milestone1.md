@@ -16,6 +16,7 @@
 ### Important Data
 * The Sign in and Sign up that store users infomation and data.
 * The chat section for user to communicate in real time.
+* The four web pages content, including the specific floor plan of each apartment. If the user click the apartment picture, it will jump into another page for the     specific details of the apartment. For example, floor plan, rent price, deposit, pet policy, location and contact information.
 ---
 
 # User interface
