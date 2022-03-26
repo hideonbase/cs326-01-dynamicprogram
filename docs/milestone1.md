@@ -6,7 +6,7 @@
 ---
 ### Team Overview
 * Heng Huang , HengHuang123
-* Jianye Nie, hideonbase
+* Jianye Nie(JY), hideonbase
 * Junming Li, junmingli1
 * Rui wang BaoYuZai
 ---
