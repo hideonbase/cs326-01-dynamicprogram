@@ -28,5 +28,6 @@ We definitely  need a login system.
 One of the four web page content, including the specific floor plan of each apartment.
 ![ShowEX1](https://user-images.githubusercontent.com/78442520/160244841-97c320e4-f9f1-4f10-9b42-62f65e5bd5c4.PNG)
 ![ShowEx2](https://user-images.githubusercontent.com/78442520/160244864-4e5ad003-0a99-4f5b-93d9-83da75e87d91.PNG)
+
 It shows the ratings of the different communities in Amherst.
 ![explore](https://user-images.githubusercontent.com/98610173/160301888-d28d083a-53e7-42fa-94d2-7e070ced75c7.png)
