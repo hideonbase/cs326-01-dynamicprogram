@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amherstbnb</title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .header {
+            background: scroll url("imgs/1083398835.jpg") 50% -60px / 100% 150% no-repeat;
+            height: 420px;
+        }
+
+        .header-top {
+            color: white;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.2);
+            align-items: center;
+            height: 50px;
+        }
+
+        .header-top :link, .header-top :visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        .header .brand-text {
+            font-size: 32px;
+            font-weight: 900;
+            margin-right: 64px;
+            margin-left: 8px;
+        }
+
+        .header .nav {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-grow: 1;
+            padding-right: 8px;
+            font-size: 14px;
+        }
+
+        .header .nav *:nth-of-type(4) {
+            margin-left: auto;
+        }
+
+        .header-top-decorate {
+            position: absolute;
+            transform: rotate(-1deg);
+            height: 40px;
+            width: 100%;
+            background: #50608c;
+            bottom: -40px;
+            right: 0px;
+        }
+
+        .header .tips-box {
+            height: 60px;
+            width: 100%;
+            position: relative;
+        }
+
+        .header .tips {
+            position: absolute;
+            color: white;
+            top: 28px;
+            right: 150px;
+        }
+
+        .header .search-section {
+            width: 100%;
+            padding-top: 83px;
+
+        }
+
+        .header .search-box {
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+            background-color: rgba(255, 255, 0, 0.2);
+            height: 64px;
+            border-radius: 8px;
+            box-shadow: 0 0 4px 1px rgba(255, 255, 0, 0.8);
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .header .search-box .search-input {
+            height: 24px;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            padding: 4px 8px;
+            flex-grow: 1;
+        }
+
+        .header .search-box .search-button {
+            height: 32px;
+            background-color: rgb(255, 255, 0);
+            border: 0;
+            border-radius: 4px;
+        }
+
+        .main-title {
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .item-section {
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            justify-items: center;
+            align-items: flex-end;
+            gap: 0 8px;
+
+        }
+
+        .item-section .item {
+            margin: 0;
+            padding: 0;
+        }
+
+        .item-section .item img {
+            max-width: 200px;
+            height: 200px;
+            border-radius: 16px;
+        }
+
+        .item-section .item {
+            text-align: center;
+        }
+        .item-section .item figcaption{
+            padding: 16px 0;
+        }
+
+        footer .note-section {
+            margin-top: 16px;
+            text-align: center;
+            text-align-last: center;
+        }
+
+        main{
+            color: #7c7a28;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <header class="header">
+        <div class="header-top">
+            <span class="brand-text">Amherstbnb</span>
+            <nav class="nav">
+                <a href="#" class="nav-link">Explore</a>
+                <a href="#" class="nav-link">Rent</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="#" class="nav-link">Sign Up</a>
+                <a href="#" class="nav-link">Sign In</a>
+            </nav>
+            <div class="header-top-decorate"></div>
+        </div>
+        <div class="tips-box">
+            <div class="tips">
+                Build For your needs
+            </div>
+        </div>
+
+        <section class="search-section">
+            <section class="search-box">
+                <input type="text" class="search-input" placeholder="Type in apartment name ..">
+                <button class="search-button">Search</button>
+            </section>
+        </section>
+    </header>
+    <main>
+        <h1 class="main-title">Amhert Rental Community</h1>
+        <section class="item-section">
+            <figure class="item">
+                <img src="./imgs/1.jpg">
+                <figcaption>Mill Valley</figcaption>
+            </figure>
+            <figure class="item">
+                <img src="./imgs/2.jpg">
+                <figcaption>Kendrick Place</figcaption>
+            </figure>
+            <figure class="item">
+                <img src="./imgs/3.jpg">
+                <figcaption>Aspen Heights</figcaption>
+            </figure>
+            <figure class="item">
+                <img src="./imgs/4.jpg">
+                <figcaption>North square</figcaption>
+            </figure>
+            <figure class="item">
+                <img src="./imgs/5.jpg">
+                <figcaption>Rolling green</figcaption>
+            </figure>
+            <figure class="item">
+                <img src="./imgs/6.jpg">
+                <figcaption>Olympia Place</figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <div class="note-section">
+            <span class="note">Exclusive offers!!</span>
+        </div>
+    </footer>
+</main>
+</body>
+</html>
