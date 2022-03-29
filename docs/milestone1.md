@@ -17,6 +17,7 @@
 * The Sign-in and Sign-up stores users' information and data.
 * The chat section for users to communicate in real-time.
 * The four web pages content, including the specific floor plan of each apartment. If the user clicks the apartment picture, it will jump into another page for the specific details of the apartment. For example, floor plan, rent price, deposit, pet policy, location, and contact information.
+* It will give the user a direct comparison of different Amherst communities. For example, parking, location, safety, school District, and Maintenance. It will help users pick the best community for them.
 ---
 
 # User interface
