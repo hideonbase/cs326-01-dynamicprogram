@@ -44,9 +44,10 @@ html, body {
     transform: rotate(-1deg);
     height: 40px;
     width: 100%;
-    background: #0000007a;
+    background: #623aac;
     bottom: -40px;
     right: 0px;
+    
 }
 
 
@@ -60,11 +61,38 @@ html, body {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(4, 2fr);
-    justify-items: left;
     align-items: flex-end;
-    margin-left: 30px;
+    margin-left: auto;
 
 }
+
+.container {
+    width: 80%;
+    height: 420px;
+    color: #623aac;
+    text-align: center;
+    font-size: 28px;
+    background-color: rgba(0, 25, 253, 0.2);
+}
+
+.container .item1 {
+    font-size: 18px;
+    text-align: justify;
+    margin-left: auto;
+    justify-items: auto;
+}
+
+.container .item2 {
+    font-size: 20px;
+    text-align: left;
+    margin-left: auto;
+    justify-items: left;
+    background-color: rgb(236, 248, 4);
+}
+.checked {
+    color: orange;
+  }
+
 
 .item-section .item {
     margin: 0;
