@@ -3,7 +3,7 @@ import * as url from 'url';
 import { readFile, writeFile } from 'fs/promises';
 import path from 'path';
 
-let counters = [];
+let users = {};
 
 const JSONfile = 'user.json';
 
@@ -13,48 +13,54 @@ const headerFields = { 'Content-Type': 'application/json' };
 async function reload(filename) {
   try {
     const data = await readFile(filename, { encoding: 'utf8' });
-    counters = JSON.parse(data);
+    users = JSON.parse(data);
   } catch (err) {
-    counters =[];
+    users ={};
   }
 }
 
-async function saveCounters() {
+async function saveUsers() {
   try {
-    const data = JSON.stringify(counters);
+    const data = JSON.stringify(users);
     await writeFile(JSONfile, data, { encoding: 'utf8' });
   } catch (err) {
     console.log(err);
   }
 }
 
-function counterExists(name) {
-  return name in counters;
+function userExists(name) {
+ return name in users;
 }
 
 async function createCounter(response, name,pass) {
-  let eachuser ={}
-  eachuser[name] = {name: name, pass:pass};
-  if (name === undefined) {
+  const eachuser = {name: name, pass:pass};
+  await reload(JSONfile);
+  if (name === undefined || pass === undefined) {
     // 400 - Bad Request
     response.writeHead(400, headerFields);
-    response.write({ error: 'Counter Name Required' });
+    response.write({ error: 'username or password Required' });
     response.end();
-  } else {
-    await reload(JSONfile);
-    counters.push(JSON.stringify(eachuser));
-    await saveCounters();
+  }else if (userExists(name)){
+    await saveUsers();
+    response.writeHead(400, headerFields);
+    response.write(JSON.stringify({ error: 'username already exits' }));
+    response.end();
+
+  }else {
+    console.log(0)
+    users[name]=eachuser;
+    await saveUsers();
     response.writeHead(200, headerFields);
-    response.write(JSON.stringify({ name: name, value: pass }));
+    response.write(JSON.stringify({ name: name, pass: pass }));
     response.end();
   }
 }
 
 async function readCounter(response, name) {
   await reload(JSONfile);
-  if (counterExists(name)) {
+  if (userExists(name)) {
     response.writeHead(200, headerFields);
-    response.write(JSON.stringify({ name: name, value: counters[name] }));
+    response.write(JSON.stringify({ name: name, value: users[0] }));
     response.end();
   } else {
     // 404 - Not Found
@@ -67,10 +73,10 @@ async function readCounter(response, name) {
 async function updateCounter(response, name) {
   await reload(JSONfile);
   if (counterExists(name)) {
-    counters[name] = counters[name]+1;
+    users[name] = users[name]+1;
     await saveCounters();
     response.writeHead(200, headerFields);
-    response.write(JSON.stringify({ name: name, value: counters[name] }));
+    response.write(JSON.stringify({ name: name, value: users[0] }));
     response.end();
   } else {
     response.writeHead(404, headerFields);
@@ -82,10 +88,10 @@ async function updateCounter(response, name) {
 async function deleteCounter(response, name) {
   await reload(JSONfile);
   if (counterExists(name)) {
-    delete counters[name];
+    delete users[name];
     await saveCounters();
     response.writeHead(200, headerFields);
-    response.write(JSON.stringify({ name: name, value: counters[name]}));
+    response.write(JSON.stringify({ name: name, value: users[name]}));
     response.end();
   } else {
     // 404 - Not Found
@@ -98,7 +104,7 @@ async function deleteCounter(response, name) {
 async function dumpCounters(response) {
   await reload(JSONfile);
   response.writeHead(200, headerFields);
-  response.write(JSON.stringify(counters));
+  response.write(JSON.stringify(users));
   response.end();
 }
 
@@ -109,7 +115,7 @@ async function basicServer(request, response) {
   const method = request.method;
   if (method == 'POST' && pathname.startsWith('/user/create')) {
     createCounter(response, options.name, options.pass);
-  } else if (method == 'GET' && pathname.startsWith('/read?')) {
+  } else if (method == 'GET' && pathname.startsWith('/user/read?')) {
     readCounter(response, options.name);
   }else if (method == 'POST' && pathname.startsWith('/update')) {
     updateCounter(response, options.name);
@@ -127,7 +133,7 @@ async function basicServer(request, response) {
         type = 'text/javascript';
       } else if (pathname.endsWith('.html')) {
         type = 'text/html';
-      } else if (pathname.endsWith('.jpg')){
+      } else if (pathname.endsWith('.jpg')){//i don't know what to do
         type = 'image/jpeg';
       } else {
         type = 'text/plain';

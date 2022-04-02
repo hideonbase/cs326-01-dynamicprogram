@@ -5,18 +5,19 @@ const user = document.getElementById('userna');
 const pass = document.getElementById('passwo');
 const createButton = document.getElementById('create');
 
-
+const readButton = document.getElementById('justSignin');
 
 createButton.addEventListener('click', async (e) => {
   const name = user.value;
   const passw = pass.value;
-  
-  await crud.createCounter(name,passw);
- // output.innerHTML = JSON.stringify(json);
- // await allCounters();
+  await crud.createUser(name,passw);
 });
 
-
+readButton.addEventListener('click', async(e)=>{
+  const name = user.value;
+  const infoma =  await crud.readAllCounters(name);
+  console.log(JSON.stringify(infoma));
+});
 //可能用来更新信息
 /*updateButton.addEventListener('click', async (e) => {
   const name = nameText.value;

@@ -1,5 +1,5 @@
 
-export async function createCounter(name,pass) {
+export async function createUser(name,pass) {
   const response = await fetch(`/user/create?name=${name}&pass=${pass}`, {
     method: 'POST',
   });
@@ -13,12 +13,17 @@ export async function createCounter(name,pass) {
 //这个respone是从loginthis里返回的。记得加个/user/
 
 
-export async function readCounter(name) {
+export async function readUser(name) {
   const response = await fetch(`/read?name=${name}`, {
     method: 'GET',
   });
+  console.log(response)
   const data = await response.json();
-  return data;
+  if(response.ok){
+    return data;
+  }else{
+    alert(data["error"]);
+  }
 }
 
 export async function updateCounter(name) {
