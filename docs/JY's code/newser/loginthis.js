@@ -130,6 +130,7 @@ async function basicServer(request, response) {
       } else {
         type = 'text/plain';
       }
+      console.log(pathname.substring(1))
       const data = await readFile(pathname.substring(1), 'utf8');
 
       response.writeHead(200, { 'Content-Type': type });

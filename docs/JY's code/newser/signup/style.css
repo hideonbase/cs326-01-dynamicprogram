@@ -3,12 +3,16 @@ html, body {
     margin: 0;
     font-family: Arial;
     background: scroll url("./imgs1/keYNxyjMVw_small.jpg") 20% -60px / 100% 150% no-repeat;
-    height:700px;
+    height:850px;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .header {
-    background: scroll url("./imgs1/apartments.jpg") 50% -30px / 100% 900% no-repeat;
+    background: scroll url("./imgs1/apartments.jpg") no-repeat;
+    background-size: auto 100%;
+    background-attachment: fixed;
+    -moz-background-size: cover;
 
     height: 50px;
 }
