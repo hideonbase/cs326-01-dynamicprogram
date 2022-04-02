@@ -31,4 +31,4 @@ One of the four web page content, including the specific floor plan of each apar
 ![ShowEx2](https://user-images.githubusercontent.com/78442520/160244864-4e5ad003-0a99-4f5b-93d9-83da75e87d91.PNG)
 
 It shows the ratings of the different communities in Amherst.
-![explore](https://user-images.githubusercontent.com/98610173/160301888-d28d083a-53e7-42fa-94d2-7e070ced75c7.png)
+![rating](https://user-images.githubusercontent.com/98610173/161394360-6958dd37-8b13-4184-952f-9126c3c1480e.png)
