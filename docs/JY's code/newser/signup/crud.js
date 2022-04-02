@@ -17,7 +17,6 @@ export async function readUser(name) {
   const response = await fetch(`/read?name=${name}`, {
     method: 'GET',
   });
-  console.log(response)
   const data = await response.json();
   if(response.ok){
     return data;

@@ -3,7 +3,7 @@ import * as url from 'url';
 import { readFile, writeFile } from 'fs/promises';
 import path from 'path';
 
-let users = {};
+let users = [];
 
 const JSONfile = 'user.json';
 
@@ -15,7 +15,7 @@ async function reload(filename) {
     const data = await readFile(filename, { encoding: 'utf8' });
     users = JSON.parse(data);
   } catch (err) {
-    users ={};
+    users =[];
   }
 }
 
@@ -23,20 +23,27 @@ async function saveUsers() {
   try {
     const data = JSON.stringify(users);
     await writeFile(JSONfile, data, { encoding: 'utf8' });
-  } catch (err) {
+  } catch (err) { 
     console.log(err);
   }
 }
 
 function userExists(name) {
- return name in users;
+ let returnthis = false;
+ for(let i = 0; i<users.length; ++i){
+  console.log(JSON.parse(users[i]));
+  if(users[i][name] !== undefined){
+    return true;
+  }
+ }
+ return returnthis;
 }
 
 async function createCounter(response, name,pass) {
-  const eachuser = {name: name, pass:pass};
+  const eachuser ={};
+  eachuser[name] = {name: name, pass:pass};
   await reload(JSONfile);
   if (name === undefined || pass === undefined) {
-    // 400 - Bad Request
     response.writeHead(400, headerFields);
     response.write({ error: 'username or password Required' });
     response.end();
@@ -45,10 +52,8 @@ async function createCounter(response, name,pass) {
     response.writeHead(400, headerFields);
     response.write(JSON.stringify({ error: 'username already exits' }));
     response.end();
-
   }else {
-    console.log(0)
-    users[name]=eachuser;
+    users.push(JSON.stringify(eachuser));
     await saveUsers();
     response.writeHead(200, headerFields);
     response.write(JSON.stringify({ name: name, pass: pass }));
