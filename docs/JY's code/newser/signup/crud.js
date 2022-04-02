@@ -1,6 +1,6 @@
 
 export async function createCounter(name,pass) {
-  const response = await fetch(`/create?name=${name}&pass=${pass}`, {
+  const response = await fetch(`/user/create?name=${name}&pass=${pass}`, {
     method: 'POST',
   });
   const data = await response.json();

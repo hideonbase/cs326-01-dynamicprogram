@@ -1,8 +1,9 @@
 import * as http from 'http';
 import * as url from 'url';
 import { readFile, writeFile } from 'fs/promises';
+import path from 'path';
 
-let counters = {};
+let counters = [];
 
 const JSONfile = 'user.json';
 
@@ -14,7 +15,7 @@ async function reload(filename) {
     const data = await readFile(filename, { encoding: 'utf8' });
     counters = JSON.parse(data);
   } catch (err) {
-    counters = {};
+    counters =[];
   }
 }
 
@@ -32,7 +33,8 @@ function counterExists(name) {
 }
 
 async function createCounter(response, name,pass) {
-  let eachuser = {name: name, pass:pass}
+  let eachuser ={}
+  eachuser[name] = {name: name, pass:pass};
   if (name === undefined) {
     // 400 - Bad Request
     response.writeHead(400, headerFields);
@@ -40,7 +42,7 @@ async function createCounter(response, name,pass) {
     response.end();
   } else {
     await reload(JSONfile);
-    counters[name] = eachuser;
+    counters.push(JSON.stringify(eachuser));
     await saveCounters();
     response.writeHead(200, headerFields);
     response.write(JSON.stringify({ name: name, value: pass }));
@@ -102,11 +104,9 @@ async function dumpCounters(response) {
 
 async function basicServer(request, response) {
   const parsedURL = url.parse(request.url, true);
-  console.log(parsedURL);
   const options = parsedURL.query;
   const pathname = parsedURL.pathname;
   const method = request.method;
-  console.log(pathname);
   if (method == 'POST' && pathname.startsWith('/user/create')) {
     createCounter(response, options.name, options.pass);
   } else if (method == 'GET' && pathname.startsWith('/read?')) {
@@ -127,10 +127,11 @@ async function basicServer(request, response) {
         type = 'text/javascript';
       } else if (pathname.endsWith('.html')) {
         type = 'text/html';
+      } else if (pathname.endsWith('.jpg')){
+        type = 'image/jpeg';
       } else {
         type = 'text/plain';
       }
-      console.log(pathname.substring(1))
       const data = await readFile(pathname.substring(1), 'utf8');
 
       response.writeHead(200, { 'Content-Type': type });

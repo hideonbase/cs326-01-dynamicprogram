@@ -1,22 +1,11 @@
 import * as crud from './crud.js';
 
-//const nameText = document.getElementById('name');
-//const createButton = document.getElementById('create');
-//const readButton = document.getElementById('read');
-//const updateButton = document.getElementById('update');
-//const deleteButton = document.getElementById('delete');
-//const output = document.getElementById('output');
-//const all = document.getElementById('all');
-
 
 const user = document.getElementById('userna');
 const pass = document.getElementById('passwo');
 const createButton = document.getElementById('create');
 
-/*async function allCounters() {
-  const json = await crud.readAllCounters();
-  all.innerHTML = JSON.stringify(json);
-}*/
+
 
 createButton.addEventListener('click', async (e) => {
   const name = user.value;
