@@ -12,7 +12,6 @@ export async function createUser(name,pass) {
 }
 //这个respone是从loginthis里返回的。记得加个/user/
 
-
 export async function readUser(name) {
   const response = await fetch(`/read?name=${name}`, {
     method: 'GET',
