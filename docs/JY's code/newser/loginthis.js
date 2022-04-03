@@ -46,11 +46,6 @@ async function createCounter(response, name,pass) {
     response.writeHead(400, headerFields);
     response.write({ error: 'username or password Required' });
     response.end();
-  }else if (userExists(name)){
-    await saveUsers();
-    response.writeHead(400, headerFields);
-    response.write(JSON.stringify({ error: 'username already exits' }));
-    response.end();
   }else {
     users.push(JSON.stringify(eachuser));
     await saveUsers();

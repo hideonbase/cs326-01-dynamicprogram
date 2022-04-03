@@ -6,6 +6,8 @@ html, body {
     height:850px;
     background-position: center;
     background-attachment: fixed;
+    background-size: auto 170%;
+
 }
 
 .header {
@@ -83,6 +85,22 @@ html, body {
     border: 2px solid #222;
 }
 
+.form-control.success input{
+    border-color: #2ecc71;
+}
+.form-control.error input{
+    border-color: #e74c3c;
+}
+
+.form-control.error small{
+    color: #e74c3c;
+    visibility: visible;
+}
+small{
+    position:relative;   
+    font-size:medium;
+    visibility: hidden;
+}
 
 .agree{
     border-radius: 20px;

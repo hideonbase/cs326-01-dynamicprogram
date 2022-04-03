@@ -27,16 +27,25 @@
         <div class="signup">
             <h>Sign Up</h>
             <p></p>
-            <input type="email" class="input" placeholder="USERNAME" id="userna" name="userna">
-            <input type="password" class="input" placeholder="Password" id="passwo" name="passwo">
+            <div class="form-control">
+                <input type="email" class="input" placeholder="USERNAME" id="userna" name="userna" ><small></small>
+            </div>
+            <div class="form-control">
+                <input type="password" class="input" placeholder="Password" id="passwo" name="passwo" ><small></small>
+            </div>
+            <div class="form-control">
+                <input type="password" class="input" placeholder="Password Confirm" id="passwo2" name="passwo" ><small></small>
+            </div>
             <p></p>
-            <input type="checkbox" id="diao">agree the terms and conditions
+            <div class = 'agreeterm'>
+            <input type="checkbox" id="diao"><a>agree the terms and conditions</a>
+            </div>
             <p></p>
             <input type="button" class="agree" id="create" value="Submit"></button>
             <hr>
             <p class = 'o'>OR</p>
             <br>You have an account already?</br>
-            <button type = 'button' class ='signupwithwechat' id="justSignin">Sign in</button>
+            <button type = 'submit' class ='signupwithwechat' id="justSignin">Sign in</button>
         </div>
         </div>
     </main>
