@@ -31,8 +31,7 @@ async function saveUsers() {
 function userExists(name) {
  let returnthis = false;
  for(let i = 0; i<users.length; ++i){
-  console.log(JSON.parse(users[i]));
-  if(users[i][name] !== undefined){
+  if(name in JSON.parse(users[i])){
     return true;
   }
  }
@@ -65,7 +64,7 @@ async function readCounter(response, name) {
   await reload(JSONfile);
   if (userExists(name)) {
     response.writeHead(200, headerFields);
-    response.write(JSON.stringify({ name: name, value: users[0] }));
+    response.write(JSON.stringify({ name: name, value: users }));
     response.end();
   } else {
     // 404 - Not Found

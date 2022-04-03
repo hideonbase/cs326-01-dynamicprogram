@@ -13,10 +13,12 @@ createButton.addEventListener('click', async (e) => {
   await crud.createUser(name,passw);
 });
 
+
+//这个没弄完，我想着是直接用readalluser，还是哪个，用readAllluser就不会用到readCounter
 readButton.addEventListener('click', async(e)=>{
   const name = user.value;
-  const infoma =  await crud.readAllCounters(name);
-  console.log(JSON.stringify(infoma));
+  const infoma =  await crud.readCounter(name);
+  console.log(JSON.parse(infoma[0]));
 });
 //可能用来更新信息
 /*updateButton.addEventListener('click', async (e) => {
