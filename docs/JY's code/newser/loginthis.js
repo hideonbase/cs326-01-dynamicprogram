@@ -121,13 +121,13 @@ async function basicServer(request, response) {
     createCounter(response, options.name, options.pass);
   } else if (method == 'GET' && pathname.startsWith('/user/read?')) {
     readCounter(response, options.name);
-  }else if (method == 'POST' && pathname.startsWith('/update')) {
+  }else if (method == 'POST' && pathname.startsWith('/user/update')) {
     updateCounter(response, options.name);
-  }else if (method == 'DELETE' && pathname.startsWith('/delete')) {
+  }else if (method == 'DELETE' && pathname.startsWith('/user/delete')) {
     deleteCounter(response, options.name);
-  } else if (method == 'GET' && pathname.startsWith('/dump')) {
+  } else if (method == 'GET' && pathname.startsWith('/user/dump')) {
     dumpCounters(response);
-  } else if (method == 'GET' && pathname.startsWith('/signup')) {
+  } else if (method == 'GET' && (pathname.startsWith('/signup') || pathname.startsWith('/sign in'))) {
     try {
       // Determine the content type of the requested file (if it is a file).
       let type = '';

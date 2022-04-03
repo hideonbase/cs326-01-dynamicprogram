@@ -13,7 +13,7 @@ export async function createUser(name,pass) {
 //这个respone是从loginthis里返回的。记得加个/user/
 
 export async function readUser(name) {
-  const response = await fetch(`/read?name=${name}`, {
+  const response = await fetch(`/user/read?name=${name}`, {
     method: 'GET',
   });
   const data = await response.json();
@@ -25,7 +25,7 @@ export async function readUser(name) {
 }
 
 export async function updateCounter(name) {
-  const response = await fetch(`/update?name=${name}`, {
+  const response = await fetch(`/user/update?name=${name}`, {
     method: 'POST',
   });
   const data = await response.json();
@@ -33,7 +33,7 @@ export async function updateCounter(name) {
 }
 
 export async function deleteCounter(name) {
-  const response = await fetch(`/delete?name=${name}`, {
+  const response = await fetch(`/user/delete?name=${name}`, {
     method: 'DELETE',
   });
   const data = await response.json();
@@ -41,7 +41,7 @@ export async function deleteCounter(name) {
 }
 
 export async function readAllCounters() {
-  const response = await fetch(`/dump`, {
+  const response = await fetch(`/user/dump`, {
     method: 'GET',
   });
   const data = await response.json();
