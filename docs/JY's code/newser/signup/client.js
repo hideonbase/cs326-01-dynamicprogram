@@ -13,7 +13,7 @@ createButton.addEventListener('click', async (e) => {
 
   let checkingthis = true;
   let userexit = false;
-  const infoma =  await crud.readAllCounters();
+  const infoma =  await crud.readAllusers();
   for(let i = 0; i<infoma.length; ++i){
     if(user.value in JSON.parse(infoma[i])){
       console.log(1)

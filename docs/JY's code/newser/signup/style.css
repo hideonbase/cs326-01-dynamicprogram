@@ -2,20 +2,19 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: Arial;
-    background: scroll url("./imgs1/keYNxyjMVw_small.jpg") 20% -60px / 100% 150% no-repeat;
-    height:850px;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: auto 170%;
-
+    background-image:url("./imgs1/keYNxyjMVw_small.jpg");
+    background-repeat: no-repeat;
+    height:870px;
+    background-position:center;
+    background-size: auto 110%;
 }
 
 .header {
-    background: scroll url("./imgs1/apartments.jpg") no-repeat;
-    background-size: auto 100%;
+    background-image: url("./imgs1/apartments.jpg");
+    background-repeat: no-repeat;
+    background-size: 33.3cm;
     background-attachment: fixed;
-    -moz-background-size: cover;
-
+    width: 100%;
     height: 50px;
 }
 
@@ -147,6 +146,7 @@ footer .note-section {
     padding:50px 0;
     color:#f0f9ff;
     background-color:#282d32;
+    width: 100%;
 
 }
 .note-section h2{

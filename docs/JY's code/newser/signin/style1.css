@@ -2,19 +2,17 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: Arial;
-    background:  url("imgs2/734512.jpg") 50% -20px / 100% 100% repeat fixed;
+    background-image:  url("imgs2/734512.jpg");
+    background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: auto 200%;
+    background-attachment: fixed;
 }
 
 .header {
-    height: 100px;
+    height: 20px;
 }
 .logoimg{
-    display: block;
-    margin-top: -10%;
-    margin-left: auto;
-    margin-right: 23%;
     width: 50%;
 }
 
@@ -26,6 +24,7 @@ html, body {
     padding: 50px;
     text-align:center;
     font-size: 80%;
+    margin-top: 2%;
 }
 
 #diao{

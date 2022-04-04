@@ -38,7 +38,7 @@ function userExists(name) {
  return returnthis;
 }
 
-async function createCounter(response, name,pass) {
+async function createuser(response, name,pass) {
   const eachuser ={};
   eachuser[name] = {name: name, pass:pass};
   await reload(JSONfile);
@@ -113,7 +113,7 @@ async function basicServer(request, response) {
   const pathname = parsedURL.pathname;
   const method = request.method;
   if (method == 'POST' && pathname.startsWith('/user/create')) {
-    createCounter(response, options.name, options.pass);
+    createuser(response, options.name, options.pass);
   } else if (method == 'GET' && pathname.startsWith('/user/read?')) {
     readCounter(response, options.name);
   }else if (method == 'POST' && pathname.startsWith('/user/update')) {
