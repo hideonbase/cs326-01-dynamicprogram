@@ -13,6 +13,9 @@ html, body {
     height: 20px;
 }
 .logoimg{
+    margin-left: auto;
+    left:-7.5cm;
+    position: relative;
     width: 50%;
 }
 
