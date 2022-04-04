@@ -74,7 +74,8 @@ createButton.addEventListener('click', async (e) => {
     const name = user.value;
     const passw = pass.value;
     await crud.createUser(name,passw);
-    location.href = "http://127.0.0.1:5500/sign%20in/index.html";
+    alert("account created");
+    location.href = "http://127.0.0.1:5500/signin/index.html";
     //这里我个人认为是3000
   }
 });

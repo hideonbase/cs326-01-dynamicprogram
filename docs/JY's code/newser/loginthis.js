@@ -122,7 +122,7 @@ async function basicServer(request, response) {
     deleteCounter(response, options.name);
   } else if (method == 'GET' && pathname.startsWith('/user/dump')) {
     dumpCounters(response);
-  } else if (method == 'GET' && (pathname.startsWith('/signup') || pathname.startsWith('/sign in'))) {
+  } else if (method == 'GET' && (pathname.startsWith('/signup') || pathname.startsWith('/signin'))) {
     try {
       // Determine the content type of the requested file (if it is a file).
       let type = '';
