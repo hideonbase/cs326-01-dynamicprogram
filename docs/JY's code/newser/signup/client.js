@@ -6,10 +6,11 @@ const pass = document.getElementById('passwo');
 const pass2 = document.getElementById('passwo2');
 const createButton = document.getElementById('create');
 
-const readButton = document.getElementById('justSignin');
 
 createButton.addEventListener('click', async (e) => {
-  setErrorForterm()
+
+
+
   let checkingthis = true;
   let userexit = false;
   const infoma =  await crud.readAllCounters();
@@ -21,6 +22,7 @@ createButton.addEventListener('click', async (e) => {
       break;
     }
   }
+  
   if(user.value.trim() === ""){
     setErrorFor(user,"Username can not be blank");
     checkingthis = false;
@@ -36,6 +38,7 @@ createButton.addEventListener('click', async (e) => {
   }else{
     setSuceessFor(user);
   }
+
   if(pass.value.trim() === ""){
     setErrorFor(pass,"Password can not be blank");
     checkingthis = false;
@@ -45,6 +48,7 @@ createButton.addEventListener('click', async (e) => {
   }else{
     setSuceessFor(pass);
   }
+
   if(pass2.value.trim() === ""){
     setErrorFor(pass2,"Password2 can not be blank");
     checkingthis = false;
@@ -54,21 +58,28 @@ createButton.addEventListener('click', async (e) => {
   }else{
     setSuceessFor(pass2);
   }
-  if(document.getElementById('diao').checked){
 
+  if(!document.getElementById('diao').checked){
+    const formControl = document.getElementById('diao').parentElement;
+    const small = formControl.querySelector('a');
+    small.style.color = '#e74c3c';
+    checkingthis = false;
+  }else{
+    const formControl = document.getElementById('diao').parentElement;
+    const small = formControl.querySelector('a');
+    small.style.color = 'black';
   }
   //if(document.querySelector)
   if(checkingthis){
     const name = user.value;
     const passw = pass.value;
     await crud.createUser(name,passw);
+    location.href = "http://127.0.0.1:5500/sign%20in/index.html";
+    //这里我个人认为是3000
   }
 });
 
 //这个没弄完，我想着是直接用readalluser，还是哪个，用readAllluser就不会用到readCounter
-readButton.addEventListener('click', async(e)=>{
-  const name = user.value;
-});
 
 
 //for checking error
@@ -85,11 +96,7 @@ function setSuceessFor(input){
   const small = formControl.querySelector('small');
   small.hidden=true;
 }
-function setErrorForterm(){
-  const formControl = document.getElementById('diao').parentElement;
-  const small = formControl.querySelector('a');
-  small.style.color = '#e74c3c';
-}
+
 function lettersNumbersSpacesDashes(str) {
   return /^[A-Za-z0-9 -]*$/.test(str);
 }
@@ -109,6 +116,4 @@ function lettersNumbersSpacesDashes(str) {
   const json = await crud.deleteCounter(name);
   output.innerHTML = JSON.stringify(json);
   await allCounters();
-});
-
-allCounters();*/
+});*/

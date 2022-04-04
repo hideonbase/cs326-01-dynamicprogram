@@ -2,7 +2,7 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: Arial;
-    background:  url("../imgs2/734512.jpg") 50% -20px / 100% 100% repeat fixed;
+    background:  url("imgs2/734512.jpg") 50% -20px / 100% 100% repeat fixed;
     background-position: center;
     background-size: cover;
 }

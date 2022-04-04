@@ -22,9 +22,6 @@ c.addEventListener('click',async(e)=>{
 
 
 
-
-
-
 a.addEventListener('keyup',doubleadd1);
 function doubleadd1(){
     b.addEventListener('keyup',colorchange1);
