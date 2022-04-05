@@ -93,7 +93,6 @@ html, body {
     color: orange;
   }
 
-
 .item-section .item {
     margin: 0;
     padding: 0;
@@ -130,4 +129,26 @@ footer .note-section {
 
 main{
     color: #45287c;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+button:hover {
+    background-color: rgb(8, 8, 255);
+}
+
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
