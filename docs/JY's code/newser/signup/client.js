@@ -5,13 +5,14 @@ const user = document.getElementById('userna');
 const pass = document.getElementById('passwo');
 const pass2 = document.getElementById('passwo2');
 const createButton = document.getElementById('create');
+const trans = document.getElementById('transfer');
 
 
 createButton.addEventListener('click', async (e) => {
-
   let checkingthis = true;
   let userexit = false;
-  const infoma =  await crud.readAllusers();
+  
+const infoma =  await crud.readAllusers();
   for(let i = 0; i<infoma.length; ++i){
     if(user.value in JSON.parse(infoma[i])){
       userexit = true;
@@ -70,14 +71,15 @@ createButton.addEventListener('click', async (e) => {
     const name = user.value;
     const passw = pass.value;
     await crud.createUser(name,passw);
-    alert("account created");
     location.href = "http://127.0.0.1:3000/signin/index.html";
     //这里我个人认为是3000
   }
 });
 
 //这个没弄完，我想着是直接用readalluser，还是哪个，用readAllluser就不会用到readCounter
-
+trans.addEventListener('click',async (e)=>{
+  location.href = "http://127.0.0.1:3000/signin/index.html";
+})
 
 //for checking error
 function setErrorFor(input,message){

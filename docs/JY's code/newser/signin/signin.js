@@ -1,18 +1,13 @@
-import * as crud from './anotCrud';
+//import * as crud from './anotCrud';
 
 let a = document.getElementById('input1');
 let b = document.getElementById('input2');
 let c = document.getElementById('go');
 
 
-
-
-
-
 c.addEventListener('click',async(e)=>{
     const usern = a.value;
     const passw = b.value;
-    const backdata = await crud.crudreadAllCounters();
 
 })
 
@@ -36,17 +31,17 @@ function colorchange1(){
     c.style.color = 'white';
     c.style.backgroundColor ="#00BFFF";
     c.style.borderColor='white';
+    colorchange2();
     orignn = c.style.backgroundColor;
+}
+if((a.value != "")&&(b.value !="")){
     c.addEventListener("mouseenter",function(){
-        console.log(orignn);
-        c.style.backgroundColor="#007FFF"
+        c.style.backgroundColor="#D3D3D3";
     });
     c.addEventListener("mouseleave",function(){
         c.style.backgroundColor=orignn;
     });
-    colorchange2()
 }
-
 function colorchange2(){
     if(a.value === ""|| b.value ===""){
         c.style.color='#D3D3D3';

@@ -1,14 +1,11 @@
-import * as http from 'http';
-import * as url from 'url';
-import { readFile, writeFile } from 'fs/promises';
-import path from 'path';
 import express from 'express';
 import logger from 'morgan';
+import { readFile, writeFile } from 'fs/promises';
 
 
 let users = [];
 
-const JSONfile = 'user.json';
+const JSONfile = 'users.json';
 
 // NOTE: We changed the content type from text/html to application/json.
 const headerFields = { 'Content-Type': 'application/json' };
@@ -54,7 +51,7 @@ async function createuser(response, name,pass) {
   }
 }
 
-async function readCounter(response, name) {
+/*async function readCounter(response, name) {
   await reload(JSONfile);
   if (userExists(name)) {
     response.writeHead(200, headerFields);
@@ -97,11 +94,11 @@ async function deleteCounter(response, name) {
     response.write(JSON.stringify({ error: `Counter '${name}' Not Found` }));
     response.end();
   }
-}
+}*/
 
 async function dumpUsers(response) {
   await reload(JSONfile);
-  response.json({idk:"gay"});
+  response.status(201).json(users);
 }
 
 /*async function basicServer(request, response) {
@@ -156,26 +153,29 @@ http.createServer(basicServer).listen(3000, () => {
 });*/
 
 const app = express();
+const port = 3000;
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use('/signup', express.static('signup'));
+app.use('/signin', express.static('signin'));
 app.get('*', async (request, response) => {
   response.status(404).send(`Not found: ${request.path}`);
 });
+
+app.post('/user/dump', async (request, response) => {
+  dumpUsers(response);
+});
+
+
 
 app.post('/user/create', async (request, response) => {
   const options = request.body;
   createuser(response,options.name,options.pass);
 });
 
-app.get('/user/dump', async (request, response) => {
-  const options = request.body;
-  dumpUsers(response);
-});
 
 
-
-app.listen(3000, () => {
-  console.log(`Server started on poart 3000`);
+app.listen(port, () => {
+  console.log(`Server started on poart ${port}`);
 });
