@@ -9,16 +9,12 @@ const createButton = document.getElementById('create');
 
 createButton.addEventListener('click', async (e) => {
 
-
-
   let checkingthis = true;
   let userexit = false;
   const infoma =  await crud.readAllusers();
   for(let i = 0; i<infoma.length; ++i){
     if(user.value in JSON.parse(infoma[i])){
-      console.log(1)
       userexit = true;
-      console.log(userexit)
       break;
     }
   }
@@ -75,7 +71,7 @@ createButton.addEventListener('click', async (e) => {
     const passw = pass.value;
     await crud.createUser(name,passw);
     alert("account created");
-    location.href = "http://127.0.0.1:5500/signin/index.html";
+    location.href = "http://127.0.0.1:3000/signin/index.html";
     //这里我个人认为是3000
   }
 });

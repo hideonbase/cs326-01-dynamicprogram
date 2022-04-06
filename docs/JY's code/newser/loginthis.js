@@ -2,6 +2,9 @@ import * as http from 'http';
 import * as url from 'url';
 import { readFile, writeFile } from 'fs/promises';
 import path from 'path';
+import express from 'express';
+import logger from 'morgan';
+
 
 let users = [];
 
@@ -43,15 +46,11 @@ async function createuser(response, name,pass) {
   eachuser[name] = {name: name, pass:pass};
   await reload(JSONfile);
   if (name === undefined || pass === undefined) {
-    response.writeHead(400, headerFields);
-    response.write({ error: 'username or password Required' });
-    response.end();
+    response.status(400).json({ error: 'username or password Required' })
   }else {
     users.push(JSON.stringify(eachuser));
     await saveUsers();
-    response.writeHead(200, headerFields);
-    response.write(JSON.stringify({ name: name, pass: pass }));
-    response.end();
+    response.json({ name: name, pass: pass })
   }
 }
 
@@ -100,14 +99,12 @@ async function deleteCounter(response, name) {
   }
 }
 
-async function dumpCounters(response) {
+async function dumpUsers(response) {
   await reload(JSONfile);
-  response.writeHead(200, headerFields);
-  response.write(JSON.stringify(users));
-  response.end();
+  response.json({idk:"gay"});
 }
 
-async function basicServer(request, response) {
+/*async function basicServer(request, response) {
   const parsedURL = url.parse(request.url, true);
   const options = parsedURL.query;
   const pathname = parsedURL.pathname;
@@ -156,4 +153,29 @@ async function basicServer(request, response) {
 // Start the server on port 3000.
 http.createServer(basicServer).listen(3000, () => {
   console.log('Server started on port 3000');
+});*/
+
+const app = express();
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use('/signup', express.static('signup'));
+app.get('*', async (request, response) => {
+  response.status(404).send(`Not found: ${request.path}`);
+});
+
+app.post('/user/create', async (request, response) => {
+  const options = request.body;
+  createuser(response,options.name,options.pass);
+});
+
+app.get('/user/dump', async (request, response) => {
+  const options = request.body;
+  dumpUsers(response);
+});
+
+
+
+app.listen(3000, () => {
+  console.log(`Server started on poart 3000`);
 });
