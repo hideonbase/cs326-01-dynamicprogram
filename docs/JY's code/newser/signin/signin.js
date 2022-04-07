@@ -26,22 +26,13 @@ b.addEventListener('keyup',doubleadd2);
 function doubleadd2(){
     a.addEventListener('keyup',colorchange1);
 }
-let orignn;
 function colorchange1(){
     c.style.color = 'white';
     c.style.backgroundColor ="#00BFFF";
     c.style.borderColor='white';
     colorchange2();
-    orignn = c.style.backgroundColor;
 }
-if((a.value != "")&&(b.value !="")){
-    c.addEventListener("mouseenter",function(){
-        c.style.backgroundColor="#D3D3D3";
-    });
-    c.addEventListener("mouseleave",function(){
-        c.style.backgroundColor=orignn;
-    });
-}
+
 function colorchange2(){
     if(a.value === ""|| b.value ===""){
         c.style.color='#D3D3D3';
@@ -49,4 +40,3 @@ function colorchange2(){
         c.style.borderColor='#D3D3D3';
     }
 }
-

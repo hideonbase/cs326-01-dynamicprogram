@@ -7,7 +7,8 @@ const pass2 = document.getElementById('passwo2');
 const createButton = document.getElementById('create');
 const trans = document.getElementById('transfer');
 
-
+let id = 0;
+restoreID();
 createButton.addEventListener('click', async (e) => {
   let checkingthis = true;
   let userexit = false;
@@ -70,7 +71,9 @@ const infoma =  await crud.readAllusers();
   if(checkingthis){
     const name = user.value;
     const passw = pass.value;
-    await crud.createUser(name,passw);
+    await crud.createUser(name,passw,id);
+    id++;
+    saveid();
     location.href = "http://127.0.0.1:3000/signin/index.html";
     //这里我个人认为是3000
   }
@@ -100,6 +103,16 @@ function lettersNumbersSpacesDashes(str) {
   return /^[A-Za-z0-9 -]*$/.test(str);
 }
 
+function saveid(){
+  window.localStorage.setItem('thisID', JSON.stringify({getid:id}));
+}
+function restoreID(){
+  let theID = window.localStorage.getItem('thisID');
+  if(theID){
+    let gettheID = JSON.parse(theID);
+    id = gettheID.getid;
+  }
+}
 //可能用来更新信息
 /*updateButton.addEventListener('click', async (e) => {
   const name = nameText.value;

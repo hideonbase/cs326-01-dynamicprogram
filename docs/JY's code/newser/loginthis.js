@@ -38,16 +38,16 @@ function userExists(name) {
  return returnthis;
 }
 
-async function createuser(response, name,pass) {
+async function createuser(response, name,pass,userid) {
   const eachuser ={};
-  eachuser[name] = {name: name, pass:pass};
+  eachuser[name] = {name: name, pass:pass, user_id:userid};
   await reload(JSONfile);
   if (name === undefined || pass === undefined) {
     response.status(400).json({ error: 'username or password Required' })
   }else {
     users.push(JSON.stringify(eachuser));
     await saveUsers();
-    response.json({ name: name, pass: pass })
+    response.json({ name: name, pass: pass, user_id:userid})
   }
 }
 
@@ -171,7 +171,7 @@ app.post('/user/dump', async (request, response) => {
 
 app.post('/user/create', async (request, response) => {
   const options = request.body;
-  createuser(response,options.name,options.pass);
+  createuser(response,options.name,options.pass,options.user_id);
 });
 
 

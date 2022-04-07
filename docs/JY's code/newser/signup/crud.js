@@ -1,11 +1,11 @@
 
-export async function createUser(name,pass) {
+export async function createUser(name,pass,userid) {
   const response = await fetch('/user/create', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ name: name ,pass:pass}),
+    body: JSON.stringify({ name: name ,pass:pass, user_id:userid}),
   });
   const data = await response.json();
   if(response.ok){
