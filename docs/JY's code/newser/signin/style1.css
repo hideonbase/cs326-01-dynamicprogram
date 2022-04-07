@@ -93,6 +93,7 @@ border: 3px solid black;
 
 /*caole2*/
 .agree{
+    margin-top: 1cm;
     border-radius: 20px;
     padding:10px;
     width:25%;
@@ -105,23 +106,6 @@ border: 3px solid black;
     background-color: white;
 }
 
-
-
-.signupwithwechat{
-    border-radius: 5px;
-    margin-top: 20px;
-    width:104%;
-    margin-left: -5px;
-    outline:none;
-    background-color: #FAEBD7;
-    border:none;
-    cursor:pointer;
-    padding-top: 5px;
-}
-
-.signupwithwechat:hover{
-    background-color:#FFDAB9;
-}
 
 a{
     font-size: 70%;

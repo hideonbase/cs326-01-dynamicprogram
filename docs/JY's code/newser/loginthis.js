@@ -167,8 +167,6 @@ app.post('/user/dump', async (request, response) => {
   dumpUsers(response);
 });
 
-
-
 app.post('/user/create', async (request, response) => {
   const options = request.body;
   createuser(response,options.name,options.pass,options.user_id);
