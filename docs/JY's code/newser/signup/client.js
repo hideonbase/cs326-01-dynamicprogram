@@ -75,11 +75,9 @@ const infoma =  await crud.readAllusers();
     id++;
     saveid();
     location.href = "http://127.0.0.1:3000/signin/index.html";
-    //这里我个人认为是3000
   }
 });
 
-//这个没弄完，我想着是直接用readalluser，还是哪个，用readAllluser就不会用到readCounter
 trans.addEventListener('click',async (e)=>{
   location.href = "http://127.0.0.1:3000/signin/index.html";
 })
@@ -104,7 +102,7 @@ function lettersNumbersSpacesDashes(str) {
 }
 
 function saveid(){
-  window.localStorage.setItem('thisID', JSON.stringify({getid:id}));
+  window.localStorage.setItem('thisID', JSON.stringify({getid:0}));
 }
 function restoreID(){
   let theID = window.localStorage.getItem('thisID');
