@@ -25,6 +25,7 @@ c.addEventListener('click',async(e)=>{
     }else{
         console.log("niubi")
         setSuceessFor();
+        window.location.href='../userinfo/imUser.html';
     }
 })
 

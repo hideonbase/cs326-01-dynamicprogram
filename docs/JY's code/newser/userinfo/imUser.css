@@ -94,7 +94,7 @@ html, body {
     background: linear-gradient(to left, rgb(41,39,39) 60%, rgb(33,30,31) 40%);
 }
 .firstbox h1{
-    margin-top: -0.5cm;
+    margin-top: 0.1cm;
     margin-left: -70%;
     font-size:25px;
     color: rgb(240, 240, 240);
@@ -132,7 +132,7 @@ html, body {
 }
 
 .buttonn{
-    margin-top: 70px;
+    margin-top: 40px;
     margin-left:80% ;
 }
 .saveName{
@@ -143,6 +143,7 @@ html, body {
     border: 2px solid rgb(51,49,49);
     color:rgb(82,82,82);
     font-weight: bold;
+    cursor:pointer;
 }
 
 
