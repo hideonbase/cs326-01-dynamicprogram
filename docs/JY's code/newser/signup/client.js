@@ -67,7 +67,7 @@ const infoma =  await crud.readAllusers();
     const small = formControl.querySelector('a');
     small.style.color = 'black';
   }
-  //if(document.querySelector)
+
   if(checkingthis){
     const name = user.value;
     const passw = pass.value;
@@ -82,7 +82,6 @@ trans.addEventListener('click',async (e)=>{
   location.href = "http://127.0.0.1:3000/signin/index.html";
 })
 
-//for checking error
 function setErrorFor(input,message){
   const formControl = input.parentElement;
   const small = formControl.querySelector('small');
@@ -111,19 +110,3 @@ function restoreID(){
     id = gettheID.getid;
   }
 }
-//可能用来更新信息
-/*updateButton.addEventListener('click', async (e) => {
-  const name = nameText.value;
-  const json = await crud.updateCounter(name);
-  output.innerHTML = JSON.stringify(json);
-  await allCounters();
-});*/
-
-
-//这个可以用来注销
-/*deleteButton.addEventListener('click', async (e) => {
-  const name = nameText.value;
-  const json = await crud.deleteCounter(name);
-  output.innerHTML = JSON.stringify(json);
-  await allCounters();
-});*/

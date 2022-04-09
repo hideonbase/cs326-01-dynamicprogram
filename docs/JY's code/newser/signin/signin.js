@@ -29,8 +29,6 @@ c.addEventListener('click',async(e)=>{
 })
 
 
-//从backdata里面读取数据,不过先继续完善signup里面的东西，再弄sign in，比如我要弄sign up的条件，sign up条件不够时候的报错。css要改。
-
 
 
 
