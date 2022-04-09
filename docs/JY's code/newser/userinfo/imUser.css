@@ -91,26 +91,41 @@ html, body {
     padding: 50px;
     margin-left: 30%;
     text-align:center;
-    background: linear-gradient(to left, red 60%, blue 40%);
+    background: linear-gradient(to left, rgb(41,39,39) 60%, rgb(33,30,31) 40%);
 }
 .firstbox h1{
     margin-top: -0.5cm;
     margin-left: -70%;
     font-size:25px;
-    color: white;
+    color: rgb(240, 240, 240);
 }
 
 .thename{
     margin-top: -60px;
     margin-left: 8cm;
 }
+.thename label{
+    color:rgb(184,184,184)
+}
+
 .input{
     margin-top: 20px;
     border-radius: 7px;
     padding:20px;
     width:50%;
     outline:none;
+    border: 2px solid rgb(41,39,39);
+    background-color: rgb(51,49,49);
+    color:rgb(240,240,240);
+    font-weight: bold;
 }
+.input:focus{
+    border: 2px solid rgb(240,240,240);
+}
+#userid{
+    background-color:rgb(41,39,39) ;
+}
+
 .thetopone{
     margin-left: 0.5cm;
     width: 97%;
@@ -123,6 +138,11 @@ html, body {
 .saveName{
     width: 4.5cm;
     height: 0.7cm;
+    border-radius: 7px;
+    background-color: rgb(41,39,39);
+    border: 2px solid rgb(51,49,49);
+    color:rgb(82,82,82);
+    font-weight: bold;
 }
 
 
