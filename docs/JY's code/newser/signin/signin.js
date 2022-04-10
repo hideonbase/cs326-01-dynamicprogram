@@ -1,10 +1,14 @@
 import * as crud from '../signup/crud.js';
+import * as giving from '/giving.js'
 
 let a = document.getElementById('input1');
 let b = document.getElementById('input2');
 let c = document.getElementById('go');
 let ustext = document.getElementById('usernametext');
 let patext = document.getElementById('paswordtext');
+
+
+
 
 c.addEventListener('click',async(e)=>{
 
@@ -23,9 +27,9 @@ c.addEventListener('click',async(e)=>{
     if(userexit === false){
         setErrorFor()
     }else{
+      const startlogin = await fetch(`/userlogin?usern=${usern});
         console.log("niubi")
-        setSuceessFor();
-        window.location.href='../userinfo/imUser.html';
+     //   window.location.href='../userinfo/imUser.html';
     }
 })
 

@@ -74,12 +74,12 @@ const infoma =  await crud.readAllusers();
     await crud.createUser(name,passw,id);
     id++;
     saveid();
-    location.href = "http://127.0.0.1:3000/signin/index.html";
+    window.location.href = "http://127.0.0.1:3000/signin/index.html";
   }
 });
 
 trans.addEventListener('click',async (e)=>{
-  location.href = "http://127.0.0.1:3000/signin/index.html";
+  window.location.href = "http://127.0.0.1:3000/signin/index.html";
 })
 
 function setErrorFor(input,message){
