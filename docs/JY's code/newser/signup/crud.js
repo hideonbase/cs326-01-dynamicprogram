@@ -1,7 +1,11 @@
 
-export async function createCounter(name,pass) {
-  const response = await fetch(`/create?name=${name}&pass=${pass}`, {
+export async function createUser(name,pass,userid) {
+  const response = await fetch('/user/create', {
     method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ name: name ,pass:pass, user_id:userid}),
   });
   const data = await response.json();
   if(response.ok){
@@ -10,37 +14,19 @@ export async function createCounter(name,pass) {
     alert(data["error"]);
   }
 }
-//这个respone是从loginthis里返回的。记得加个/user/
 
 
-export async function readCounter(name) {
-  const response = await fetch(`/read?name=${name}`, {
-    method: 'GET',
-  });
-  const data = await response.json();
-  return data;
-}
-
-export async function updateCounter(name) {
-  const response = await fetch(`/update?name=${name}`, {
+export async function readAllusers(){
+  const response = await fetch('/user/dump', {
     method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
   });
   const data = await response.json();
-  return data;
-}
-
-export async function deleteCounter(name) {
-  const response = await fetch(`/delete?name=${name}`, {
-    method: 'DELETE',
-  });
-  const data = await response.json();
-  return data;
-}
-
-export async function readAllCounters() {
-  const response = await fetch(`/dump`, {
-    method: 'GET',
-  });
-  const data = await response.json();
-  return data;
+  if(response.ok){
+    return data;
+  }else{
+    alert(data["error"]);
+  }
 }

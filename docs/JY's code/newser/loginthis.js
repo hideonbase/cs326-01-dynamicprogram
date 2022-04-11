@@ -1,10 +1,12 @@
-import * as http from 'http';
-import * as url from 'url';
+import express from 'express';
+import logger from 'morgan';
 import { readFile, writeFile } from 'fs/promises';
 
-let counters = {};
 
-const JSONfile = 'user.json';
+
+let users = [];
+let currentuser="";
+const JSONfile = 'users.json';
 
 // NOTE: We changed the content type from text/html to application/json.
 const headerFields = { 'Content-Type': 'application/json' };
@@ -12,141 +14,139 @@ const headerFields = { 'Content-Type': 'application/json' };
 async function reload(filename) {
   try {
     const data = await readFile(filename, { encoding: 'utf8' });
-    counters = JSON.parse(data);
+    users = JSON.parse(data);
   } catch (err) {
-    counters = {};
+    users =[];
   }
 }
 
-async function saveCounters() {
+async function saveUsers() {
   try {
-    const data = JSON.stringify(counters);
+    const data = JSON.stringify(users);
     await writeFile(JSONfile, data, { encoding: 'utf8' });
-  } catch (err) {
+  } catch (err) { 
     console.log(err);
   }
 }
 
-function counterExists(name) {
-  return name in counters;
+function userExists(name) {
+ let returnthis = false;
+ for(let i = 0; i<users.length; ++i){
+  if(name in JSON.parse(users[i])){
+    return JSON.parse(users[i]);
+  }
+ }
+ return returnthis;
 }
 
-async function createCounter(response, name,pass) {
-  let eachuser = {name: name, pass:pass}
-  if (name === undefined) {
-    // 400 - Bad Request
-    response.writeHead(400, headerFields);
-    response.write({ error: 'Counter Name Required' });
-    response.end();
-  } else {
+async function createuser(response, name,pass,userid) {
+  const eachuser ={};
+  eachuser[name] = {name: name, pass:pass, user_id:userid};
+  await reload(JSONfile);
+  if (name === undefined || pass === undefined) {
+    response.status(400).json({ error: 'username or password Required' })
+  }else {
+    users.push(JSON.stringify(eachuser));
+    await saveUsers();
+    response.json({ name: name, pass: pass, user_id:userid})
+  }
+}
+
+async function changeusername(response,name){
     await reload(JSONfile);
-    counters[name] = eachuser;
-    await saveCounters();
-    response.writeHead(200, headerFields);
-    response.write(JSON.stringify({ name: name, value: pass }));
-    response.end();
-  }
-}
-
-async function readCounter(response, name) {
-  await reload(JSONfile);
-  if (counterExists(name)) {
-    response.writeHead(200, headerFields);
-    response.write(JSON.stringify({ name: name, value: counters[name] }));
-    response.end();
-  } else {
-    // 404 - Not Found
-    response.writeHead(404, headerFields);
-    response.write(JSON.stringify({ error: `Counter '${name}' Not Found` }));
-    response.end();
-  }
-}
-
-async function updateCounter(response, name) {
-  await reload(JSONfile);
-  if (counterExists(name)) {
-    counters[name] = counters[name]+1;
-    await saveCounters();
-    response.writeHead(200, headerFields);
-    response.write(JSON.stringify({ name: name, value: counters[name] }));
-    response.end();
-  } else {
-    response.writeHead(404, headerFields);
-    response.write(JSON.stringify({ error: `Counter '${name}' Not Found` }));
-    response.end();
-  }
-}
-
-async function deleteCounter(response, name) {
-  await reload(JSONfile);
-  if (counterExists(name)) {
-    delete counters[name];
-    await saveCounters();
-    response.writeHead(200, headerFields);
-    response.write(JSON.stringify({ name: name, value: counters[name]}));
-    response.end();
-  } else {
-    // 404 - Not Found
-    response.writeHead(404, headerFields);
-    response.write(JSON.stringify({ error: `Counter '${name}' Not Found` }));
-    response.end();
-  }
-}
-
-async function dumpCounters(response) {
-  await reload(JSONfile);
-  response.writeHead(200, headerFields);
-  response.write(JSON.stringify(counters));
-  response.end();
-}
-
-async function basicServer(request, response) {
-  const parsedURL = url.parse(request.url, true);
-  console.log(parsedURL);
-  const options = parsedURL.query;
-  const pathname = parsedURL.pathname;
-  const method = request.method;
-  console.log(pathname);
-  if (method == 'POST' && pathname.startsWith('/user/create')) {
-    createCounter(response, options.name, options.pass);
-  } else if (method == 'GET' && pathname.startsWith('/read?')) {
-    readCounter(response, options.name);
-  }else if (method == 'POST' && pathname.startsWith('/update')) {
-    updateCounter(response, options.name);
-  }else if (method == 'DELETE' && pathname.startsWith('/delete')) {
-    deleteCounter(response, options.name);
-  } else if (method == 'GET' && pathname.startsWith('/dump')) {
-    dumpCounters(response);
-  } else if (method == 'GET' && pathname.startsWith('/signup')) {
-    try {
-      // Determine the content type of the requested file (if it is a file).
-      let type = '';
-      if (pathname.endsWith('.css')) {
-        type = 'text/css';
-      } else if (pathname.endsWith('.js')) {
-        type = 'text/javascript';
-      } else if (pathname.endsWith('.html')) {
-        type = 'text/html';
-      } else {
-        type = 'text/plain';
-      }
-      const data = await readFile(pathname.substring(1), 'utf8');
-
-      response.writeHead(200, { 'Content-Type': type });
-      response.write(data);
-    } catch (err) {
-      response.statusCode = 404;
-      response.write('Not found: ' + pathname);
+    if(name === undefined){
+      response.status(404).json({error:'name is not valid'});
+    }else{
+      for(let i = 0; i<users.length; ++i){
+        if(currentuser in JSON.parse(users[i])){
+          let obj = JSON.parse(users[i])
+          obj[currentuser]['name'] = name;
+          users[i] = JSON.stringify(obj);
+          break;
+        }
+       }
+       await saveUsers();
+       response.json({ newname: name})
     }
-    response.end();
-  } else {
-    response.writeHead(404, headerFields);
-    response.write(JSON.stringify({ error: 'Not Found' }));
-    response.end();
+}
+
+async function deleteaccountt(response,name){
+  await reload(JSONfile);
+  if(name === undefined){
+    response.status(404).json({error:'id is not valid'});
+  }else{
+    for(let i = 0; i<users.length; ++i){
+      console.log(currentuser)
+      if(currentuser in JSON.parse(users[i])){
+        users.splice(i,1);
+        currentuser = "";
+        break;
+      }
+     }
+     await saveUsers();
+     response.json({ deletename: currentuser})
   }
 }
 
-// Start the server on port 3000.
-http.createServer(basicServer).listen(3000, () => {
-  console.log('Server started on port 3000');
+
+async function dumpUsers(response) {
+  await reload(JSONfile);
+  response.status(201).json(users);
+}
+
+
+const app = express();
+const port = 3000;
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use('/signup', express.static('signup'));
+app.use('/signin', express.static('signin'));
+app.use('/userinfo',express.static('userinfo'));
+
+
+
+app.get('*', async (request, response) => {
+  response.status(404).send(`Not found: ${request.path}`);
+});
+
+app.post('/user/dump', async (request, response) => {
+  dumpUsers(response);
+});
+
+app.post('/user/create', async (request, response) => {
+  const options = request.body;
+  createuser(response,options.name,options.pass,options.user_id);
+});
+
+app.post('/userlogin', async(request,response) => {
+  let theUsername = request.body;
+  currentuser = theUsername.name;
+  response.status(201).json({usern:theUsername.name});
+})
+
+app.post('/IneedInfo',async(request,response) =>{
+  if(currentuser !== ""){
+    response.status(201).json(userExists(currentuser)[currentuser]);
+  }else{
+    response.status(400).json({error: "please sign in"})
+  }
+})
+
+app.post('/user/changename', async(request,response)=>{
+  let newusername = request.body;
+  if(currentuser !==""){
+    changeusername(response,newusername.name);
+  }else{
+    response.json({error: "please sign in"})
+  }
+})
+
+app.post('/user/deleteaccount',async(request,response)=>{
+  let deletea = request.body;
+  deleteaccountt(response,deletea.name);
+})
+
+app.listen(port, () => {
+  console.log(`Server started on poart ${port}`);
 });

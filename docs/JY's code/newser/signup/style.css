@@ -2,14 +2,19 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: Arial;
-    background: scroll url("./imgs1/keYNxyjMVw_small.jpg") 20% -60px / 100% 150% no-repeat;
-    height:700px;
-    background-position: center;
+    background-image:url("./imgs1/keYNxyjMVw_small.jpg");
+    background-repeat: no-repeat;
+    height:870px;
+    background-position:center;
+    background-size: auto 110%;
 }
 
 .header {
-    background: scroll url("./imgs1/apartments.jpg") 50% -30px / 100% 900% no-repeat;
-
+    background-image: url("./imgs1/apartments.jpg");
+    background-repeat: no-repeat;
+    background-size: 33.3cm;
+    background-attachment: fixed;
+    width: 100%;
     height: 50px;
 }
 
@@ -79,6 +84,22 @@ html, body {
     border: 2px solid #222;
 }
 
+.form-control.success input{
+    border-color: #2ecc71;
+}
+.form-control.error input{
+    border-color: #e74c3c;
+}
+
+.form-control.error small{
+    color: #e74c3c;
+    visibility: visible;
+}
+small{
+    position:relative;   
+    font-size:medium;
+    visibility: hidden;
+}
 
 .agree{
     border-radius: 20px;
@@ -125,6 +146,7 @@ footer .note-section {
     padding:50px 0;
     color:#f0f9ff;
     background-color:#282d32;
+    width: 100%;
 
 }
 .note-section h2{

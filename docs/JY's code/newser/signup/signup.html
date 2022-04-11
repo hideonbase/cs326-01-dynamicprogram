@@ -11,14 +11,15 @@
 </head>
 <body>
 <main>
-
     <header class="header">
         <div class="header-top">
             <a class="brand-text" href="../signup.html">Amherstbnb</a>
+                                     <!---换成主页-->
             <nav class="nav">
                 <a href="#" class="nav-link">Explore</a>
                 <a href="#" class="nav-link">Rent</a>
-                <a href="../sign in/signin.html" class="nav-link">Sign In</a>
+                <a href="../signin/signin.html" class="nav-link">Sign In</a>
+                                     <!---换成3000-->
             </nav>
             <div class="header-top-decorate"></div>
         </div>  
@@ -28,16 +29,25 @@
         <div class="signup">
             <h>Sign Up</h>
             <p></p>
-            <input type="email" class="input" placeholder="USERNAME" id="userna" name="userna">
-            <input type="password" class="input" placeholder="Password" id="passwo" name="passwo">
+            <div class="form-control">
+                <input type="email" class="input" placeholder="Username" id="userna" name="userna" ><small></small>
+            </div>
+            <div class="form-control">
+                <input type="password" class="input" placeholder="Password" id="passwo" name="passwo" ><small></small>
+            </div>
+            <div class="form-control">
+                <input type="password" class="input" placeholder="Password Confirm" id="passwo2" name="passwo" ><small></small>
+            </div>
             <p></p>
-            <input type="checkbox" id="diao">agree the terms and conditions
+            <div class = 'agreeterm'>
+            <input type="checkbox" id="diao"><a>agree the terms and conditions</a>
+            </div>
             <p></p>
-            <input type="button" class="agree" id="create" value="Submit"></button>
+            <input type="button" class="agree" id="create" value="Submit"></input>
             <hr>
-            <p class = 'o'>OR</p><p></p>
-            <button type = 'button' class ='signupwithwechat'>Sign in with Email</button>
-            <br>You have an account already? <a href="#">Sign in</a></br>
+            <p class = 'o'>OR</p>
+            <br>You have an account already?</br>
+            <input type = 'button' class ='signupwithwechat' value="Sign in" id ="transfer"></input>                                                                                          <!---这里要换成3000-->
         </div>
         </div>
     </main>
