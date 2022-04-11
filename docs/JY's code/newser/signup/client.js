@@ -101,7 +101,7 @@ function lettersNumbersSpacesDashes(str) {
 }
 
 function saveid(){
-  window.localStorage.setItem('thisID', JSON.stringify({getid:0}));
+  window.localStorage.setItem('thisID', JSON.stringify({getid:id}));
 }
 function restoreID(){
   let theID = window.localStorage.getItem('thisID');

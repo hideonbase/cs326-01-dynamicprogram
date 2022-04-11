@@ -1,5 +1,4 @@
 import * as crud from '../signup/crud.js';
-import * as giving from '/giving.js'
 
 let a = document.getElementById('input1');
 let b = document.getElementById('input2');
@@ -27,9 +26,18 @@ c.addEventListener('click',async(e)=>{
     if(userexit === false){
         setErrorFor()
     }else{
-      const startlogin = await fetch(`/userlogin?usern=${usern});
-        console.log("niubi")
-     //   window.location.href='../userinfo/imUser.html';
+      setSuceessFor();
+      const startlogin = await fetch(`/userlogin?usern=${usern}`,{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name: usern}),
+      });
+        if(!startlogin.ok){
+          return;
+        }
+       window.location.href='http://127.0.0.1:3000/userinfo/imUser.html'
     }
 })
 

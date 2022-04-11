@@ -1,11 +1,11 @@
 import express from 'express';
 import logger from 'morgan';
 import { readFile, writeFile } from 'fs/promises';
-import { response } from 'express';
+
 
 
 let users = [];
-let currentuser = ;
+let currentuser="";
 const JSONfile = 'users.json';
 
 // NOTE: We changed the content type from text/html to application/json.
@@ -33,7 +33,7 @@ function userExists(name) {
  let returnthis = false;
  for(let i = 0; i<users.length; ++i){
   if(name in JSON.parse(users[i])){
-    return true;
+    return JSON.parse(users[i]);
   }
  }
  return returnthis;
@@ -52,6 +52,40 @@ async function createuser(response, name,pass,userid) {
   }
 }
 
+async function changeusername(response,name){
+    await reload(JSONfile);
+    if(name === undefined){
+      response.status(404).json({error:'name is not valid'});
+    }else{
+      for(let i = 0; i<users.length; ++i){
+        if(currentuser in JSON.parse(users[i])){
+          let obj = JSON.parse(users[i])
+          obj[currentuser]['name'] = name;
+          users[i] = JSON.stringify(obj);
+          break;
+        }
+       }
+       await saveUsers();
+       response.json({ newname: name})
+    }
+}
+
+async function deleteaccount(response,name){
+  await reload(JSONfile);
+  if(name === undefined){
+    response.status(404).json({error:'id is not valid'});
+  }else{
+    for(let i = 0; i<users.length; ++i){
+      if(currentuser in JSON.parse(users[i])){
+        users.splice(i,i);
+        console.log(users)
+        break;
+      }
+     }
+     await saveUsers();
+     response.json({ deletename: currentuser})
+  }
+}
 
 
 async function dumpUsers(response) {
@@ -70,7 +104,6 @@ app.use('/signin', express.static('signin'));
 app.use('/userinfo',express.static('userinfo'));
 
 
-app.get('/')
 
 app.get('*', async (request, response) => {
   response.status(404).send(`Not found: ${request.path}`);
@@ -85,10 +118,33 @@ app.post('/user/create', async (request, response) => {
   createuser(response,options.name,options.pass,options.user_id);
 });
 
-app.get('/userlogin', async(request,response) => {
-  let theUsernae = request.query.usern;
-  console.log(theUsernae);
-  response.status(201).json({usern:theUsernae});
+app.post('/userlogin', async(request,response) => {
+  let theUsername = request.body;
+  currentuser = theUsername.name;
+  response.status(201).json({usern:theUsername.name});
+})
+
+app.post('/IneedInfo',async(request,response) =>{
+  if(currentuser !== ""){
+    response.status(201).json(userExists(currentuser)[currentuser]);
+  }else{
+    response.status(400).json({error: "please sign in"})
+  }
+})
+
+app.post('/user/changename', async(request,response)=>{
+  let newusername = request.body;
+  if(currentuser !==""){
+    changeusername(response,newusername.name);
+  }else{
+    response.json({error: "please sign in"})
+  }
+})
+
+app.post('/user/deleteaccount',async(request,response)=>{
+  let deletea = request.body;
+  deleteaccount(response,deletea.name);
+  currentuser = "";
 })
 
 app.listen(port, () => {

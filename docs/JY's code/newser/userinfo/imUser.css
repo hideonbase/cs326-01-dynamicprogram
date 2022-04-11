@@ -146,18 +146,33 @@ html, body {
 }
 
 
+.deleteaccount{
+    margin-top: 5%;
+    margin-left:60%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.deletebutton{
+    width: 6cm;
+    height: 2cm;
+    border-radius: 7px;
+    background-color: rgb(209,54,57);
+    border: 2px solid rgb(209,54,57);
+    color:white;
+    font-weight: bold;
+    font-size: large;
+    cursor:pointer;
+}
+.deletebutton:hover{
+    width: 6cm;
+    height: 2cm;
+    border-radius: 7px;
+    background-color: rgb(180,54,57);
+    border: 2px solid rgb(180,54,57);
+    color:white;
+    font-weight: bold;
+    font-size: large;
+    cursor:pointer;
+}
 
 
 
