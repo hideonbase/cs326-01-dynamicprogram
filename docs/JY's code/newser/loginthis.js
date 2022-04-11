@@ -76,8 +76,10 @@ async function deleteaccountt(response,name){
     response.status(404).json({error:'id is not valid'});
   }else{
     for(let i = 0; i<users.length; ++i){
+      console.log(currentuser)
       if(currentuser in JSON.parse(users[i])){
         users.splice(i,1);
+        currentuser = "";
         break;
       }
      }
@@ -143,7 +145,6 @@ app.post('/user/changename', async(request,response)=>{
 app.post('/user/deleteaccount',async(request,response)=>{
   let deletea = request.body;
   deleteaccountt(response,deletea.name);
-  currentuser = "";
 })
 
 app.listen(port, () => {

@@ -33,6 +33,11 @@ saveName.addEventListener('click', async (e) =>{
       });
       const data = await response.json();
       if(response.ok){
+        saveName.disabled = true;
+        saveName.style.cursor = 'unset';
+        saveName.style.color = 'rgb(82,82,82)';
+        saveName.style.backgroundColor ='rgb(41,39,39)'
+        saveName.style.borderColor = 'rgb(51,49,49)'
         return data;
       }else{
         alert(data["error"]);
@@ -49,7 +54,7 @@ deleteaccount.addEventListener('click', async(e)=>{
       });
       const data = await response.json();
       if(response.ok){
-     //   window.location.href='http://127.0.0.1:3000/signin/index.html'
+        window.location.href='http://127.0.0.1:3000/signin/index.html'
         return data;
       }else{
         alert(data["error"]);
