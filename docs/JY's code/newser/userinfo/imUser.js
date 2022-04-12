@@ -3,6 +3,8 @@ let userid = document.getElementById('userid')
 let namebar = document.getElementById('Name');
 let saveName = document.getElementById('changeName');
 let deleteaccount = document.getElementById('deleteacc');
+let logout = document.getElementById('logout');
+
 
 saveName.disabled = true;
 saveName.style.cursor = 'unset';
@@ -62,7 +64,22 @@ deleteaccount.addEventListener('click', async(e)=>{
 })
 
 
-
+logout.addEventListener('click', async(e) => {
+  const response = await fetch('/user/logoutaccount', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ name: userid.value}),
+  });
+  const data = await response.json();
+  if(response.ok){
+    window.location.href='http://127.0.0.1:3000/signin/index.html'
+    return data;
+  }else{
+    alert(data["error"]);
+  }
+})
 
 
 

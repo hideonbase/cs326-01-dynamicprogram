@@ -1,6 +1,7 @@
 import express from 'express';
 import logger from 'morgan';
 import { readFile, writeFile } from 'fs/promises';
+import { response } from 'express';
 
 
 
@@ -145,6 +146,11 @@ app.post('/user/changename', async(request,response)=>{
 app.post('/user/deleteaccount',async(request,response)=>{
   let deletea = request.body;
   deleteaccountt(response,deletea.name);
+})
+
+app.post('/user/logoutaccount', async(request,response) => {
+  currentuser = "";
+  response.status(201).json({usern:currentuser});
 })
 
 app.listen(port, () => {
