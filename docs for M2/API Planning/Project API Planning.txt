@@ -1,0 +1,27 @@
+
+
+interface
+
+	put /customer register  
+	
+	post /customer login 
+	
+	get /customer/username get user detail
+	
+	put /customer/:id update user detail
+	
+	
+	get /house get house list
+	
+	get /search get search result
+	
+	get /house/:id get house detail
+	
+	post /favorite get favorite
+	
+	post /favorite/:id add favorite
+	
+	delete /favorite/:id delete favorite
+	
+	
+	
