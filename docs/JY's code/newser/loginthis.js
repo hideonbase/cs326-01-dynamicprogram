@@ -120,7 +120,7 @@ app.post('/user/create', async (request, response) => {
   createuser(response,options.name,options.pass,options.user_id);
 });
 
-app.post('/userlogin', async(request,response) => {
+app.post('/user/login', async(request,response) => {
   let theUsername = request.body;
   currentuser = theUsername.name;
   response.status(201).json({usern:theUsername.name});

@@ -27,7 +27,7 @@ c.addEventListener('click',async(e)=>{
         setErrorFor()
     }else{
       setSuceessFor();
-      const startlogin = await fetch(`/userlogin?usern=${usern}`,{
+      const startlogin = await fetch(`/user/login?usern=${usern}`,{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
