@@ -52,10 +52,10 @@ User doesn't have 4 pages because the Update and Delete is in the same page.
 # The Division of Labor
 
 Jianye Nie:
-1.Set up the page for user to create an account for using the website.
-2.Set up the page for user to login.
-3.Set up the page for user to update his infomation and store the important component such as favorite apartment.
-4.Set up a dangerous button for user to delete his account.
+1. Set up the page for user to create an account for using the website.
+2. Set up the page for user to login.
+3. Set up the page for user to update his infomation and store the important component such as favorite apartment.
+4. Set up a dangerous button for user to delete his account.
 
 Heng Huang: 
 1. Optimize the use of log in and sign up. Only people who sign up can log in our Web to look for the apartment. 
