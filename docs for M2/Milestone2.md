@@ -238,8 +238,19 @@ Response:
 "message": "delete favourite success" }
 
 
-
-
-
-
 # Four screenshots of your client interface 
+We are tyring to help users to create thier account to log in our Web. Absolutely, the account for SIGN UP needs to be updated or created when it is necessary. After signing up, users can easily use our web to search any apertments they want. Addtionally, they can readly add the one they are interested in into their Favourite, which is the sign of "STAR---★". They picture below are briefly show how does it look like.
+
+![Create](https://user-images.githubusercontent.com/73546677/163453778-ab960f2b-1df1-4d53-b2b1-05150b8ec7db.png)
+![Search/read](https://user-images.githubusercontent.com/73546677/163453780-90c1a14c-b89d-4c88-8931-df055e4855da.png)
+![Update](https://user-images.githubusercontent.com/73546677/163453784-84db3c39-dd49-45b1-b6a1-31aa6043dd8f.png)
+![delete/read](https://user-images.githubusercontent.com/73546677/163453787-40a3405e-5e12-49b6-a954-ca5c2d93e330.png)
+
+**The division of labor**
+
+Heng Huang: 
+1. Optimize the use of log in and sign up. Only people who sign up can log in our Web to look for the apartment. 
+2. Add the UPDATE to user sign up.
+3. Add a SEARCH, which is beneficial to search what user want.
+4. Add a FAVORITE, which users can add the apartments their like into the lists folder.
+ 
