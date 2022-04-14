@@ -23,7 +23,7 @@
 
 **Data Model**
 
-Our web page has six major components: User Profiles. 
+Our web page has 几个 major components: User Profiles. 
 
 *  User profiles contains and shows user's personal information, each user has the unique user id. Also they can have other infomation that they want to store.
 
