@@ -29,12 +29,17 @@
 # Four screenshots of client interface 
 
 **►We are tyring to help users to create thier account to log in our Web.**
-
-![Create](https://user-images.githubusercontent.com/73546677/163453778-ab960f2b-1df1-4d53-b2b1-05150b8ec7db.png)
+The corresponding API is /user/create
+![signup](https://user-images.githubusercontent.com/90345005/163463073-2d8b09ad-a05e-46ad-912b-9d8846943bcb.jpg)
 
 **►Absolutely, the account for SIGN UP needs to be updated or created when it is necessary.**
+The corresponding API is /user/login
+<img width="960" alt="login" src="https://user-images.githubusercontent.com/90345005/163463114-66e23937-e8a3-4a4b-b640-50bf8d12082c.png">
 
-![delete/read](https://user-images.githubusercontent.com/73546677/163453787-40a3405e-5e12-49b6-a954-ca5c2d93e330.png)
+**►After login , users can update to his account infomation page to change the infomation that he want to change, example would be like Name**
+the corresponding API is /user/changename and /user/deleteaccount
+User doesn't have 4 pages because the Update and Delete is in the same page.
+<img width="960" alt="userinfo" src="https://user-images.githubusercontent.com/90345005/163463172-fdf34758-b31e-42e1-a8e0-97b7b6d2131a.png">
 
 **►After signing up, users can easily use our web to search any apertments they want.**
 
@@ -46,11 +51,16 @@
 
 # The Division of Labor
 
+Jianye Nie:
+1.Set up the page for user to create an account for using the website.
+2.Set up the page for user to login.
+3.Set up the page for user to update his infomation and store the important component such as favorite apartment.
+4.Set up a dangerous button for user to delete his account.
+
 Heng Huang: 
 1. Optimize the use of log in and sign up. Only people who sign up can log in our Web to look for the apartment. 
-2. Add the UPDATE to user sign up.
-3. Add a SEARCH, which is beneficial to search what user want.
-4. Add a FAVORITE, which users can add the apartments their like into the lists folder.
+2. Add a SEARCH, which is beneficial to search what user want.
+3. Add a FAVORITE, which users can add the apartments their like into the lists folder.
 
 # The URL of your Heroku Application
 
