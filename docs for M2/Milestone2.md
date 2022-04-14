@@ -264,4 +264,6 @@ Heng Huang:
 2. Add the UPDATE to user sign up.
 3. Add a SEARCH, which is beneficial to search what user want.
 4. Add a FAVORITE, which users can add the apartments their like into the lists folder.
- 
+
+# The URL of your Heroku Application
+
