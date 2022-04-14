@@ -241,19 +241,19 @@ Response:
 
 # Four screenshots of your client interface 
 
-We are tyring to help users to create thier account to log in our Web. 
+**We are tyring to help users to create thier account to log in our Web. **
 
 ![Create](https://user-images.githubusercontent.com/73546677/163453778-ab960f2b-1df1-4d53-b2b1-05150b8ec7db.png)
 
-Absolutely, the account for SIGN UP needs to be updated or created when it is necessary. 
+**Absolutely, the account for SIGN UP needs to be updated or created when it is necessary. **
 
 ![delete/read](https://user-images.githubusercontent.com/73546677/163453787-40a3405e-5e12-49b6-a954-ca5c2d93e330.png)
 
-After signing up, users can easily use our web to search any apertments they want. 
+**After signing up, users can easily use our web to search any apertments they want. **
 
 ![Search/read](https://user-images.githubusercontent.com/73546677/163453780-90c1a14c-b89d-4c88-8931-df055e4855da.png)
 
-Addtionally, they can readly add the one they are interested in into their Favourite, which is the sign of "STAR---★". They picture below are briefly show how does it look like.
+**Addtionally, they can readly add the one they are interested in into their Favourite, which is the sign of "STAR---★". They picture below are briefly show how does it look like.**
 
 ![Update](https://user-images.githubusercontent.com/73546677/163453784-84db3c39-dd49-45b1-b6a1-31aa6043dd8f.png)
 
