@@ -256,7 +256,7 @@ Addtionally, they can readly add the one they are interested in into their Favou
 
 ![Update](https://user-images.githubusercontent.com/73546677/163453784-84db3c39-dd49-45b1-b6a1-31aa6043dd8f.png)
 
-**The division of labor**
+# The Division of Labor
 
 Heng Huang: 
 1. Optimize the use of log in and sign up. Only people who sign up can log in our Web to look for the apartment. 
