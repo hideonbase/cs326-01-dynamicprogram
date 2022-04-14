@@ -34,19 +34,14 @@ Our web page has 几个 major components: User Profiles.
 
 
 # Four screenshots of client interface 
-
+HuangHeng:
 **►We are tyring to help users to create thier account to log in our Web.**
-The corresponding API is /user/create
-![signup](https://user-images.githubusercontent.com/90345005/163463073-2d8b09ad-a05e-46ad-912b-9d8846943bcb.jpg)
+
+![Create](https://user-images.githubusercontent.com/73546677/163453778-ab960f2b-1df1-4d53-b2b1-05150b8ec7db.png)
 
 **►Absolutely, the account for SIGN UP needs to be updated or created when it is necessary.**
-The corresponding API is /user/login
-<img width="960" alt="login" src="https://user-images.githubusercontent.com/90345005/163463114-66e23937-e8a3-4a4b-b640-50bf8d12082c.png">
 
-**►After login , users can update to his account infomation page to change the infomation that he want to change, example would be like Name**
-the corresponding API is /user/changename and /user/deleteaccount
-User doesn't have 4 pages because the Update and Delete is in the same page.
-<img width="960" alt="userinfo" src="https://user-images.githubusercontent.com/90345005/163463172-fdf34758-b31e-42e1-a8e0-97b7b6d2131a.png">
+![delete/read](https://user-images.githubusercontent.com/73546677/163453787-40a3405e-5e12-49b6-a954-ca5c2d93e330.png)
 
 **►After signing up, users can easily use our web to search any apertments they want.**
 
@@ -55,6 +50,21 @@ User doesn't have 4 pages because the Update and Delete is in the same page.
 **►Addtionally, they can readly add the one they are interested in into their Favourite, which is the sign of "STAR---★". They picture below are briefly show how does it look like.**
 
 ![Update](https://user-images.githubusercontent.com/73546677/163453784-84db3c39-dd49-45b1-b6a1-31aa6043dd8f.png)
+
+
+JY:
+**►I set up a better interface for sign up.**
+The corresponding API is /user/create
+![signup](https://user-images.githubusercontent.com/90345005/163463073-2d8b09ad-a05e-46ad-912b-9d8846943bcb.jpg)
+
+**►If we sign up, we should have a page to login.**
+The corresponding API is /user/login
+<img width="960" alt="login" src="https://user-images.githubusercontent.com/90345005/163463114-66e23937-e8a3-4a4b-b640-50bf8d12082c.png">
+
+**►I also update the inteface for this part. After login, users can update to his account infomation page to change the infomation that he want to change, example would be like Name**
+the corresponding API is /user/changename and /user/deleteaccount
+User doesn't have 4 pages because the Update and Delete is in the same page.
+<img width="960" alt="userinfo" src="https://user-images.githubusercontent.com/90345005/163463172-fdf34758-b31e-42e1-a8e0-97b7b6d2131a.png">
 
 # The Division of Labor
 
@@ -66,8 +76,9 @@ Jianye Nie:
 
 Heng Huang: 
 1. Optimize the use of log in and sign up. Only people who sign up can log in our Web to look for the apartment. 
-2. Add a SEARCH, which is beneficial to search what user want.
-3. Add a FAVORITE, which users can add the apartments their like into the lists folder.
+2. Add the UPDATE to user sign up.
+3. Add a SEARCH, which is beneficial to search what user want.
+4. Add a FAVORITE, which users can add the apartments their like into the lists folder.
 
 # The URL of your Heroku Application
 
