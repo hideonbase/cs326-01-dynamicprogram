@@ -21,6 +21,13 @@
 * It will give the user a direct comparison of different Amherst communities. For example, parking, location, safety, school District, and Maintenance. It will help users pick the best community for them.
 ---
 
+**Data Model**
+
+Our web page has six major components: User Profiles. 
+
+*  User profiles contains and shows user's personal information, each user has the unique user id. Also they can have other infomation that they want to store.
+
+
 # Representation of APIs 
 [APInterface List .pdf](https://github.com/326-queue/project/files/8491579/APInterface.List.pdf) 
 ![APInterface List ](https://user-images.githubusercontent.com/73546677/163459205-c8278c33-81e1-4bc7-8d6b-cba4d572c75f.JPG)
