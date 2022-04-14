@@ -28,7 +28,7 @@
 
 # Four screenshots of client interface 
 
-**►We are tyring to help users to create thier account to ►log in our Web.**
+**►We are tyring to help users to create thier account to log in our Web.**
 
 ![Create](https://user-images.githubusercontent.com/73546677/163453778-ab960f2b-1df1-4d53-b2b1-05150b8ec7db.png)
 
