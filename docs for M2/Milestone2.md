@@ -21,16 +21,16 @@
 * It will give the user a direct comparison of different Amherst communities. For example, parking, location, safety, school District, and Maintenance. It will help users pick the best community for them.
 ---
 
-**Data Model**
+# Data Model
 
 ### Elements:
 
-## Main Web
-## Web Browser
-## User Profiles. 
-## Box Chatting
-## Search Engine
-## Favourite List
+### Main Web
+### Web Browser
+### User Profiles. 
+### Box Chatting
+### Search Engine
+### Favourite List
 
  
 *  Main Web/Web Browser -- For any users who browse our website for house renting.
