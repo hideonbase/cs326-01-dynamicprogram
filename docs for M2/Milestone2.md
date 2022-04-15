@@ -34,7 +34,7 @@ Our web page has 几个 major components: User Profiles.
 
 
 # Four screenshots of client interface 
-HengHuang:
+### HengHuang:
 **►We are tyring to help users to create thier account to log in our Web.** The corresponding API is /user/login
 
 ![Create](https://user-images.githubusercontent.com/73546677/163453778-ab960f2b-1df1-4d53-b2b1-05150b8ec7db.png)
@@ -52,7 +52,7 @@ HengHuang:
 ![Update](https://user-images.githubusercontent.com/73546677/163453784-84db3c39-dd49-45b1-b6a1-31aa6043dd8f.png)
 
 
-JY:
+### JY:
 **►I set up a better interface for sign up.**
 The corresponding API is /user/create
 ![signup](https://user-images.githubusercontent.com/90345005/163463073-2d8b09ad-a05e-46ad-912b-9d8846943bcb.jpg)
@@ -68,13 +68,13 @@ User doesn't have 4 pages because the Update and Delete is in the same page.
 
 # The Division of Labor
 
-Jianye Nie:
+### Jianye Nie:
 1. Set up the page for user to create an account for using the website.
 2. Set up the page for user to login.
 3. Set up the page for user to update his infomation and store the important component such as favorite apartment.
 4. Set up a dangerous button for user to delete his account.
 
-Heng Huang: 
+### Heng Huang: 
 1. Optimize the use of log in and sign up. Only people who sign up can log in our Web to look for the apartment. 
 2. Add the UPDATE to user sign up.
 3. Add a SEARCH, which is beneficial to search what user want.
