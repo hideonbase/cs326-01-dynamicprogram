@@ -25,12 +25,12 @@
 
 ### Elements:
 
-### Main Web
-### Web Browser
-### User Profiles. 
-### Box Chatting
-### Search Engine
-### Favourite List
+### 1. Main Web
+### 2. Web Browser
+### 3. User Profiles. 
+### 4. Box Chatting
+### 5. Search Engine
+### 6. Favourite List
 
  
 *  Main Web/Web Browser -- For any users who browse our website for house renting.
