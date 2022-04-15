@@ -23,9 +23,22 @@
 
 **Data Model**
 
-Our web page has 几个 major components: User Profiles. 
+### Elements:
 
+## Main Web
+## Web Browser
+## User Profiles. 
+## Box Chatting
+## Search Engine
+## Favourite List
+
+ 
+*  Main Web/Web Browser -- For any users who browse our website for house renting.
 *  User profiles contains and shows user's personal information, each user has the unique user id. Also they can have other infomation that they want to store.
+*  Box Chatting -- For users better connect with agents if they need.
+*  Search Engine -- Search any information about the apartments.
+*  Favourite List -- Add anything that users are interested in.
+
 
 
 # Representation of APIs 
