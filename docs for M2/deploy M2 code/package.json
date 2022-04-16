@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "type": "module",
+  "engines": {
+    "node": "16.11.0"
+  },
   "private": true,
   "dependencies": {
     "express": "^4.17.3",
