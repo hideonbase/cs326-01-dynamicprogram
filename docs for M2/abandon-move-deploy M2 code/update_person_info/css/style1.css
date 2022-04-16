@@ -1,0 +1,182 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    background:  url("../imgs2/734512.jpg") 50% -20px / 100% 100% repeat fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.header {
+    height: 100px;
+}
+.logoimg{
+    display: block;
+    margin-top: -10%;
+    margin-left: auto;
+    margin-right: 23%;
+    width: 50%;
+}
+.signin{
+    width: 280px;
+    height: 380px;
+    background: #ffffff;
+    margin:10% auto 0;
+    padding: 50px;
+    text-align:center;
+    font-size: 80%;
+}
+
+#diao{
+    cursor: pointer;
+    margin-left: -67%;
+    
+}
+.signin h{
+    color: black;
+    font-weight: bold;
+    font-size:150%;
+    font-family:sans-serif;
+}
+/*caole*/
+.wrapper{
+    width: 500px;
+    height: 70px;
+    position: relative;
+    size: cover;
+}
+
+.wrapper input{
+     border-radius: 5px;
+     margin-left: -44%;
+     margin-top: 10px;
+     padding:20px;
+     width:50%;
+     border: 2px solid white;
+     background-color: #F5F5F5;
+     color: #404040;
+     font-weight:700;
+     font-size: 15px;
+    }
+.wrapperinput::content{
+    top:300px;
+}
+
+label{
+    position:absolute;
+    top: 50%;
+    left:55px;
+    transform: translateX(-45px);
+    transition: all .2s ease;
+    pointer-events: none;
+    font-weight: bold;
+    font-size:100%;
+    color: #696969;
+}
+
+input:focus+label,input:valid+label{
+    font-size: 90%;
+    top:14px;
+    padding:5px;
+}
+
+.wrapper input:hover{
+background-color: #f1f1f1;
+}
+.wrapper input:focus{
+background-color: white;
+border: 3px solid black;
+}
+
+/*caole2*/
+.agree{
+    border-radius: 20px;
+    padding:10px;
+    width:25%;
+    height:18%;
+    outline:none;
+    font-size:20px;
+    color:#D3D3D3;
+    border:2px solid #D3D3D3;
+    cursor:pointer;
+    background-color: white;
+}
+
+
+
+.signupwithwechat{
+    border-radius: 5px;
+    margin-top: 20px;
+    width:104%;
+    margin-left: -5px;
+    outline:none;
+    background-color: #FAEBD7;
+    border:none;
+    cursor:pointer;
+    padding-top: 5px;
+}
+
+.signupwithwechat:hover{
+    background-color:#FFDAB9;
+}
+
+a{
+    font-size: 70%;
+    text-decoration :none;
+    font-weight: bolder;
+    color:#87CEEB;
+}
+a:hover{
+    color: #00ffff	;
+}
+
+footer .note-section {
+    margin-top: 15%;
+    padding:50px 0;
+    color:#f0f9ff;
+    background-color:#282d32;
+
+}
+.note-section h2{
+    margin-left: 27%;
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:30px;
+}
+.note-section ul{
+    margin-left: 15%;
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+}
+.note-section ul a{
+    margin-left: 15%;
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+}
+
+.note{
+    text-align: center;
+}
+.copyright{
+    margin-top:-30px;
+    text-align:center;
+    padding-top:24px;
+    opacity:0.2;
+    font-size:11px;
+}
+
+
+#update{
+    background-color: #87CEEB;
+    width:200px;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding: 0;
+}
