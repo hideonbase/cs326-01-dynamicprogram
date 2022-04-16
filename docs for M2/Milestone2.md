@@ -19,6 +19,7 @@
 * The Search section for users to look for the sources they want.
 * The four web pages content, including the specific floor plan of each apartment. If the user clicks the apartment picture, it will jump into another page for the specific details of the apartment. For example, floor plan, rent price, deposit, pet policy, location, and contact information.
 * It will give the user a direct comparison of different Amherst communities. For example, parking, location, safety, school District, and Maintenance. It will help users pick the best community for them.
+* Users who sign up for an account can post comments on the details of each apartment, such as their personal experience, reasonable prices and security conditions.
 ---
 
 # Data Model
