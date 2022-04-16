@@ -172,8 +172,8 @@ app.post('/favourite', (req, res) => {
         ]
     })
 });
-const db = new PeopleDatabase(process.env.DATABASE_);
-await db.connect();
+// const db = new PeopleDatabase(process.env.DATABASE_);
+// await db.connect();
 app.listen(3000, () => {
     console.log('Example app listening on port 3000!');
 });
