@@ -73,6 +73,9 @@
 **►The user can add their comments in the bottom of our webpage.**
 ![KPcommentsShow](https://user-images.githubusercontent.com/78442520/163698092-4f524ae6-fd05-4e88-ad7a-f221deeb43a3.PNG)
 
+### Junming Li
+**►People can like/dislike the apartment to show their preferences.**
+![7bbf6c24cc5892e2a7446cdb0b74934](https://user-images.githubusercontent.com/98610173/163722722-dca3b652-01bb-424c-923a-e48b7c2084ae.png)
 ### JY:
 **►I set up a better interface for sign up. The corresponding API is /user/create.**
 
