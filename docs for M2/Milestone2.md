@@ -94,6 +94,6 @@
 4. Add a FAVORITE, which users can add the apartments their like into the lists folder.
 
 # The URL of your Heroku Application
-
+https://amherst-bnb.herokuapp.com/
 
 
