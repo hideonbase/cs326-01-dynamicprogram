@@ -42,10 +42,11 @@
 
 
 
+
 # Representation of APIs 
 [APInterface List .pdf](https://github.com/326-queue/project/files/8491579/APInterface.List.pdf) 
 ![APInterface List ](https://user-images.githubusercontent.com/73546677/163459205-c8278c33-81e1-4bc7-8d6b-cba4d572c75f.JPG)
-
+[APIplanRuiWang.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8500897/APIplanRuiWang.pdf)
 
 # Four screenshots of client interface 
 ### HengHuang:
@@ -65,6 +66,9 @@
 
 ![Update](https://user-images.githubusercontent.com/73546677/163453784-84db3c39-dd49-45b1-b6a1-31aa6043dd8f.png)
 
+### Rui Wang:
+**►The user can add their comments in the bottom of our webpage.**
+![KPcommentsShow](https://user-images.githubusercontent.com/78442520/163698092-4f524ae6-fd05-4e88-ad7a-f221deeb43a3.PNG)
 
 ### JY:
 **►I set up a better interface for sign up. The corresponding API is /user/create.**
