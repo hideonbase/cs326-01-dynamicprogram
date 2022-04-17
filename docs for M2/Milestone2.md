@@ -47,6 +47,7 @@
 [APInterface List .pdf](https://github.com/326-queue/project/files/8491579/APInterface.List.pdf) 
 ![APInterface List ](https://user-images.githubusercontent.com/73546677/163459205-c8278c33-81e1-4bc7-8d6b-cba4d572c75f.JPG)
 [APIplanRuiWang.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8500897/APIplanRuiWang.pdf)
+![APi](https://user-images.githubusercontent.com/98610173/163722588-e481d35a-e254-4b1d-adf8-6560965d5d56.png)
 
 # Four screenshots of client interface 
 ### HengHuang:
