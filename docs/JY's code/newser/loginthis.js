@@ -9,8 +9,6 @@ let users = [];
 let currentuser="";
 const JSONfile = 'users.json';
 
-// NOTE: We changed the content type from text/html to application/json.
-const headerFields = { 'Content-Type': 'application/json' };
 
 async function reload(filename) {
   try {
@@ -120,7 +118,7 @@ app.post('/user/create', async (request, response) => {
   createuser(response,options.name,options.pass,options.user_id);
 });
 
-app.post('/userlogin', async(request,response) => {
+app.post('/user/login', async(request,response) => {
   let theUsername = request.body;
   currentuser = theUsername.name;
   response.status(201).json({usern:theUsername.name});
@@ -156,3 +154,4 @@ app.post('/user/logoutaccount', async(request,response) => {
 app.listen(port, () => {
   console.log(`Server started on poart ${port}`);
 });
+//niubi

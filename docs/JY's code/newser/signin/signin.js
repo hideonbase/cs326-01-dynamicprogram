@@ -27,7 +27,7 @@ c.addEventListener('click',async(e)=>{
         setErrorFor()
     }else{
       setSuceessFor();
-      const startlogin = await fetch(`/userlogin?usern=${usern}`,{
+      const startlogin = await fetch(`/user/login?usern=${usern}`,{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ c.addEventListener('click',async(e)=>{
         if(!startlogin.ok){
           return;
         }
-       window.location.href='http://127.0.0.1:3000/userinfo/imUser.html'
+       window.location.href='http://127.0.0.1:3000/newser/userinfo/imUser.html'
     }
 })
 
