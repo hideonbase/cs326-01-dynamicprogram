@@ -1,0 +1,289 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    font-size: 10px;
+}
+
+.header {
+    background: scroll url("../imgs/1083398835.jpg") 50% -60px / 100% 150% no-repeat;
+
+    height: 420px;
+}
+
+.header-top {
+    color: white;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    align-items: center;
+    height: 50px;
+}
+
+.header-top :link, .header-top :visited {
+    color: white;
+    text-decoration: none;
+}
+
+.header .brand-text {
+    font-size: 32px;
+    font-weight: 900;
+    margin-right: 64px;
+    margin-left: 8px;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-grow: 1;
+    padding-right: 8px;
+    font-size: 14px;
+}
+
+.header .nav *:nth-of-type(4) {
+    margin-left: auto;
+}
+
+.header-top-decorate {
+    position: absolute;
+    transform: rotate(-1deg);
+    height: 40px;
+    width: 100%;
+    background: #50608c;
+    bottom: -40px;
+    right: 0px;
+}
+
+.header .tips-box {
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+
+.header .tips {
+    position: absolute;
+    color: white;
+    top: 28px;
+    right: 150px;
+}
+
+.header .search-section {
+    width: 100%;
+    padding-top: 83px;
+
+}
+
+.header .search-box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: rgba(255, 255, 0, 0.2);
+    height: 64px;
+    border-radius: 8px;
+    box-shadow: 0 0 4px 1px rgba(255, 255, 0, 0.8);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.header .search-box .search-input {
+    height: 24px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    flex-grow: 1;
+}
+
+.header .search-box .search-button {
+    height: 32px;
+    background-color: rgb(255, 255, 0);
+    border: 0;
+    border-radius: 4px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 28px;
+}
+
+.item-section {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: flex-end;
+    gap: 0 8px;
+
+}
+
+.item-section .item {
+    margin: 0;
+    padding: 0;
+}
+
+.item-section .item img {
+    max-width: 300px;
+    height: 300px;
+    border-radius: 16px;
+}
+
+.item-section .item {
+    text-align: center;
+}
+
+.item-section .item figcaption {
+    padding: 16px 0;
+    color: #7c7a28;
+}
+
+footer .note-section {
+    margin-top: 16px;
+    text-align: center;
+    text-align-last: center;
+}
+
+main {
+    color: #7c7a28;
+}
+
+/*
+========
+Details
+========
+*/
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.details-title {
+    background: linear-gradient(rgba(99, 109, 78, 0.216406) 13.93%, rgba(124, 122, 40, 0.15) 88.28%);
+}
+
+.details-title h1 {
+    margin: 1.5rem 0 1rem 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 3rem;
+    color: #000000;
+}
+
+.details-room-list {
+
+}
+
+.details-room-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.details-room-list .li-title {
+    display: flex;
+    flex-direction: row;
+    margin-inline: 80rem;
+    margin-left: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 5rem;
+    line-height: 5rem;
+    font-family: "CostarBrownRegular",sans-serif;
+    color: #4c4c4c;
+}
+
+.details-room-list .li-pic {
+    text-align: center;
+}
+
+.details-room-list .li-pic > img {
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 5px 5px 20px #ccc;
+}
+
+.details-room-list .li-content {
+    background: rgba(236, 231, 32, 0.5);
+    padding: 1rem 0;
+}
+
+.details-room-list .li-content li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #000000;
+    margin: 0.5rem 5rem;
+}
+
+.details-info {
+    background: rgba(124, 122, 40, 0.5);
+    padding-bottom: 2rem;
+}
+
+.details-info h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #000000;
+    margin: 1rem 5rem;
+}
+
+.details-info p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #000000;
+    margin: .5rem 5rem;
+}
+
+/* words */
+
+.comment-div{
+    background-color: cadetblue;
+}
+
+.words .words-input{
+    width: 80%;
+    display: block;
+    margin: 20px auto;
+}
+
+.words .words-button{
+    width: 50%;
+    padding: 10px;
+    background-color: aquamarine;
+    margin: 10px auto;
+    display: block;
+}
+
+.words p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #000000;
+    margin: 0.5rem 5rem;
+}
+
+.words ul{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #000000;
+    margin: 0.5rem 5rem;
+}

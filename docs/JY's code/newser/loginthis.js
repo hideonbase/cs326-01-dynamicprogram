@@ -9,8 +9,6 @@ let users = [];
 let currentuser="";
 const JSONfile = 'users.json';
 
-// NOTE: We changed the content type from text/html to application/json.
-const headerFields = { 'Content-Type': 'application/json' };
 
 async function reload(filename) {
   try {

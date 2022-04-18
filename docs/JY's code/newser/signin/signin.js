@@ -37,7 +37,7 @@ c.addEventListener('click',async(e)=>{
         if(!startlogin.ok){
           return;
         }
-       window.location.href='http://127.0.0.1:3000/userinfo/imUser.html'
+       window.location.href='http://127.0.0.1:3000/newser/userinfo/imUser.html'
     }
 })
 
