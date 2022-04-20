@@ -128,6 +128,12 @@
 4. Optimized web content.The previous introduction pages of the four different apartments contained few contents, only the apartment type map, apartment policies and  rental prices.A lot of new content has been added.For example, the text description of the apartment, the features of the apartment, the facilities offered by the apartment and the specific photos of the apartment.
 5. More elements are added to CSS documents to improve the aesthetics of the page.
 
+### Junming Li:
+1. Add new css/html feature to the page.
+2. Set up like and dislike button for every apartments.
+3. The number of click likes/dislikes of users from four different apartments is calculated and displayed on the page.
+4. Adding 4 different API on the like/dislike. 
+
 # The URL of your Heroku Application
 https://amherst-bnb.herokuapp.com/
 
