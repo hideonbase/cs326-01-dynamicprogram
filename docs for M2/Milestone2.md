@@ -47,6 +47,11 @@
 [APInterface List .pdf](https://github.com/326-queue/project/files/8491579/APInterface.List.pdf) 
 ![APInterface List ](https://user-images.githubusercontent.com/73546677/163459205-c8278c33-81e1-4bc7-8d6b-cba4d572c75f.JPG)
 [APIplanRuiWang.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8500897/APIplanRuiWang.pdf)
+![RW1](https://user-images.githubusercontent.com/78442520/164129519-2676e08a-9a61-4608-b5cd-c8ef2a5d44db.PNG)
+![RW2](https://user-images.githubusercontent.com/78442520/164129538-3c3ff9f7-c981-4077-b0a4-cd6b17713ad1.PNG)
+![RW3](https://user-images.githubusercontent.com/78442520/164129547-cbefefda-db71-49d8-9422-c50f4e479f03.PNG)
+![RW4](https://user-images.githubusercontent.com/78442520/164129557-a6361505-141f-4009-a4a3-5a13fee0f51a.PNG)
+
 
 [API Planning.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8501954/API.Planning.pdf)
 ![APi](https://user-images.githubusercontent.com/98610173/163722588-e481d35a-e254-4b1d-adf8-6560965d5d56.png)
@@ -102,6 +107,14 @@
 2. Add the UPDATE to user sign up.
 3. Add a SEARCH, which is beneficial to search what user want.
 4. Add a FAVORITE, which users can add the apartments their like into the lists folder.
+
+### Rui Wang:
+
+1. The user comment function has been implemented in four pages of the website.
+2. Only registered users can review apartments.
+3. Administrators can manage the content of user comments in the back-end database.
+4. Optimized web content.The previous introduction pages of the four different apartments contained few contents, only the apartment type map, apartment policies and  rental prices.A lot of new content has been added.For example, the text description of the apartment, the features of the apartment, the facilities offered by the apartment and the specific photos of the apartment.
+5. More elements are added to CSS documents to improve the aesthetics of the page.
 
 # The URL of your Heroku Application
 https://amherst-bnb.herokuapp.com/
