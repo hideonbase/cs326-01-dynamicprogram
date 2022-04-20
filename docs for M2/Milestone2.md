@@ -46,8 +46,11 @@
 # Representation of APIs 
 
 [Heng Huang APInterface List. pdf.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8517667/Heng.Huang.APInterface.List.pdf.pdf)
+
 [JianYe Nie.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8517671/JianYe.Nie.pdf)
+
 [Juming Li API Planning.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8517666/Juming.Li.API.Planning.pdf)
+
 [RuiWangAPIplan.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8517669/RuiWangAPIplan.pdf)
 
 ![APInterface List ](https://user-images.githubusercontent.com/73546677/163459205-c8278c33-81e1-4bc7-8d6b-cba4d572c75f.JPG)
