@@ -45,7 +45,7 @@
 
 # Representation of APIs 
 
-[Heng Huang APInterface List. pdf.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8517667/Heng.Huang.APInterface.List.pdf.pdf)
+[Heng Huang APInterface List.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8517667/Heng.Huang.APInterface.List.pdf.pdf)
 
 [JianYe Nie APInterface List.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8517671/JianYe.Nie.pdf)
 
