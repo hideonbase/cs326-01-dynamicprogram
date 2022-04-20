@@ -78,6 +78,11 @@
 **►The user can add their comments in the bottom of our webpage.**
 ![KPcommentsShow](https://user-images.githubusercontent.com/78442520/163698092-4f524ae6-fd05-4e88-ad7a-f221deeb43a3.PNG)
 
+**►Details of the apartment introduction in our webpage.**
+![DETAIL1](https://user-images.githubusercontent.com/78442520/164131182-c46fa684-7053-4891-aaea-0d4eff373505.PNG)
+![DETAIL2](https://user-images.githubusercontent.com/78442520/164131199-71ac1b87-c35f-4b9d-8f46-114e9589468c.PNG)
+
+
 ### Junming Li
 **►People can like/dislike the apartment to show their preferences.**
 ![7bbf6c24cc5892e2a7446cdb0b74934](https://user-images.githubusercontent.com/98610173/163722722-dca3b652-01bb-424c-923a-e48b7c2084ae.png)
