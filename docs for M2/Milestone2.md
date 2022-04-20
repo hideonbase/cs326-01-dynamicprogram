@@ -131,9 +131,9 @@
 
 ### Junming Li:
 1. Add new css/html feature to the page.
-2. Set up like and dislike button for every apartments.
-3. The number of clicks liked/disliked by users for the four different apartments is calculated and displayed on the page.
-4. Adding 4 different API on the like/dislike. 
+2. Follow Heng Huang's instructions to assist the project.
+3. The number of clicks liked/disliked by users for the four different apartments is calculated.
+4. Adding 4 different API on the like/dislike(In the code folder). 
 
 # The URL of your Heroku Application
 ### Version one : https://amherst-bnb.herokuapp.com/
