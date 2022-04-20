@@ -44,16 +44,17 @@
 
 
 # Representation of APIs 
-[APInterface List .pdf](https://github.com/326-queue/project/files/8491579/APInterface.List.pdf) 
+
+[Heng Huang APInterface List. pdf.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8517667/Heng.Huang.APInterface.List.pdf.pdf)
+[JianYe Nie.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8517671/JianYe.Nie.pdf)
+[Juming Li API Planning.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8517666/Juming.Li.API.Planning.pdf)
+[RuiWangAPIplan.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8517669/RuiWangAPIplan.pdf)
+
 ![APInterface List ](https://user-images.githubusercontent.com/73546677/163459205-c8278c33-81e1-4bc7-8d6b-cba4d572c75f.JPG)
-[APIplanRuiWang.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8500897/APIplanRuiWang.pdf)
 ![RW1](https://user-images.githubusercontent.com/78442520/164129519-2676e08a-9a61-4608-b5cd-c8ef2a5d44db.PNG)
 ![RW2](https://user-images.githubusercontent.com/78442520/164129538-3c3ff9f7-c981-4077-b0a4-cd6b17713ad1.PNG)
 ![RW3](https://user-images.githubusercontent.com/78442520/164129547-cbefefda-db71-49d8-9422-c50f4e479f03.PNG)
 ![RW4](https://user-images.githubusercontent.com/78442520/164129557-a6361505-141f-4009-a4a3-5a13fee0f51a.PNG)
-
-
-[API Planning.pdf](https://github.com/hideonbase/cs326-01-dynamicprogram/files/8501954/API.Planning.pdf)
 ![APi](https://user-images.githubusercontent.com/98610173/163722588-e481d35a-e254-4b1d-adf8-6560965d5d56.png)
 
 # Four screenshots of client interface 
