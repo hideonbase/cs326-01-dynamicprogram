@@ -108,9 +108,10 @@
 ### Jianye Nie:
 1. Set up the page for user to create an account for using the website.
 2. Set up the page for user to login.
-3. Set up the page for user to update his infomation and store the important component such as favorite apartment.
-4. Set up a dangerous button for user to delete his account.
+3. Set up the page for user to update his/her infomation and store the important component such as favorite apartment.
+4. Set up a dangerous button for user to delete his/her account.
 5. Assist Heng Huang to merge the project.
+6. Debuging all the functions that we implemented.
 
 ### Heng Huang: 
 1. Optimize the use of log in and sign up. Only people who sign up can log in our Web to look for the apartment. 
