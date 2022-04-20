@@ -119,6 +119,7 @@
 3. Add a SEARCH, which is beneficial to search what user want.
 4. Add a FAVORITE, which users can add the apartments their like into the lists folder.
 5. Merging all the codes together into a big project.
+6. Depoly to Heroku
 
 ### Rui Wang:
 
@@ -135,6 +136,7 @@
 4. Adding 4 different API on the like/dislike. 
 
 # The URL of your Heroku Application
-https://amherst-bnb.herokuapp.com/
+### Version one : https://amherst-bnb.herokuapp.com/
+### Version two : https://amherstbnb3.herokuapp.com
 
 
