@@ -13,6 +13,6 @@
 # Steps to start server
 - `npm install`
 - `node app.js`
-- please open url: `http://localhost:3000/client`
-    - The base URL of the API that the front-end accesses is: `http://localhost:3000`
-    - Front-end static file root directory:`http://localhost:3000/client`
+- please open url: `http://localhost:5000/client`
+    - The base URL of the API that the front-end accesses is: `http://localhost:5000`
+    - Front-end static file root directory:`http://localhost:5000/client`
