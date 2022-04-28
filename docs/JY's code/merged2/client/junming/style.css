@@ -1,0 +1,157 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+
+.header-top {
+    color: rgb(251, 255, 0);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 25, 253, 0.2);
+    align-items: center;
+    height: 50px;
+}
+
+.header-top :link, .header-top :visited {
+    color: white;
+    text-decoration: none;
+}
+
+.header .brand-text {
+    font-size: 32px;
+    font-weight: 900;
+    margin-right: 64px;
+    margin-left: 8px;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-grow: 1;
+    padding-right: 8px;
+    font-size: 18px;
+}
+
+.header .nav *:nth-of-type(3) {
+    margin-left: auto;
+}
+
+.header-top-decorate {
+    position: absolute;
+    transform: rotate(-1deg);
+    height: 40px;
+    width: 100%;
+    background: #623aac;
+    bottom: -40px;
+    right: 0px;
+    
+}
+
+
+
+.main-title {
+    text-align: center;
+    font-size: 28px;
+}
+
+.item-section {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    align-items: flex-end;
+    margin-left: auto;
+
+}
+
+.container {
+    width: 80%;
+    height: 420px;
+    color: #623aac;
+    text-align: center;
+    font-size: 28px;
+    background-color: rgba(0, 25, 253, 0.2);
+    width: 400px;
+    height: 430px;
+    border-radius: 20px;
+}
+
+.container .item1 {
+    font-size: 18px;
+    text-align: justify;
+    margin-left: auto;
+    justify-items: auto;
+}
+
+.container .item2 {
+    font-size: 20px;
+    text-align: left;
+    margin-left: auto;
+    justify-items: left;
+    background-color: rgb(236, 248, 4);
+}
+.checked {
+    color: orange;
+  }
+
+.item-section .item {
+    margin: 0;
+    padding: 0;
+}
+
+.item-section .item img {
+    max-width: 450px;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.item-section .item {
+    text-align: center;
+}
+.item-section .item figcaption{
+    padding: 16px 0;
+}
+
+footer .note-section {
+    text-align: center;
+    text-align-last: center;
+    color:rgb(89, 0, 255);
+    background-color:rgba(0, 25, 253, 0.2);
+}
+
+.footer-top-decorate {
+    position: absolute;
+    transform: rotate(0deg);
+    height: 10px;
+    width: 100%;
+    background: #623aac;
+    right: 0px;
+}
+
+main{
+    color: #45287c;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+button:hover {
+    background-color: rgb(8, 8, 255);
+}
+
+button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
