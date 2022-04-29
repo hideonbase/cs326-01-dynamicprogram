@@ -63,9 +63,46 @@ const getPageData = async () => {
 };
 
 
+
+const deleteCommentHandle = async function(comment_index,room_id){
+  //fetch
+  const deleteResponse = await fetch("/comment",{
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body:JSON.stringify({
+      comment_index,
+      room_id
+    })
+  });
+  if(!deleteResponse.ok){
+    alert("erorr info");
+  }else{
+    // refresh page
+    location.reload();
+  }
+}
+
+
+
 // request room data
 getPageData()
-    .then(pageData => {
+    .then(async pageData => {
+
+      let user_id = null;
+      const allinfo = await fetch("/IneedInfo",{
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      thisuser = (await allinfo.json());
+      
+      if(allinfo.ok){
+        user_id = thisuser['user_id']
+      }
+
       let details_room_list = [];
       details_room_list = pageData.roomListData.map((val, index) => {
         return {
@@ -352,11 +389,13 @@ getPageData()
               },
               {
                 tagName:"ul",
-                children: pageData.comment ?  pageData.comment.map(val=>{
+                children: pageData.comment ?  await pageData.comment.map((val,index)=>{
+                  const btn = `<button onclick="deleteCommentHandle(${index},${room_id})">Delete</button>`;
+                  console.log(index,val)
                   return {
                     tagName:"li",
                     options:{
-                      innerText:`${val.user_id}-${val.content}` //user id and comment content
+                      innerHTML:`${val.user_id}-${val.content} ${val.user_id == user_id?btn:""}` //user id and comment content
                     }
                   }
                 }) : []
@@ -365,6 +404,7 @@ getPageData()
           },
         ],
       };
+
 
       // Root
       let RootComponent = {

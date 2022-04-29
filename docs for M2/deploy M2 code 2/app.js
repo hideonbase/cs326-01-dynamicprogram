@@ -112,6 +112,34 @@ app.post("/comment", async(request, response) => {
  }
 })
 
+// add comments API
+//Manage the post request, post url is /comment. 
+app.delete("/comment", async(request, response) => {
+  const {comment_index,room_id} = request.body; //decapsulate the data from body package
+
+  const rooms = await getRooms();//get all rooms data
+  console.log(rooms)
+  if(!(room_id in rooms)){
+    response.sendStatus(500); //500 Bad request, if room id is not exist in rooms data
+  }
+  const room = rooms[room_id];
+  if(!room.comment){
+    response.sendStatus(500);// if no comments, return a null block
+  }
+  
+  room.comment.splice(comment_index,1);
+ const result = await setRoom(room_id,room);
+// put the data in to the database rooms.json
+
+
+ if(!result){ // result true or false
+   response.sendStatus(500);
+ }else{
+   response.sendStatus(200)
+ }
+
+})
+
 
 // From JY
 let users = [];
