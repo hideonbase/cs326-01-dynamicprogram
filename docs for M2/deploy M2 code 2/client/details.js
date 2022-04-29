@@ -313,6 +313,7 @@ getPageData()
                     thisuser = (await allinfo.json());
                     if(!allinfo.ok){
                       alert(thisuser['error']);
+                      return;
                     }
                     //End JY
                     if(content){
