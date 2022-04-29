@@ -112,7 +112,7 @@ app.post("/comment", async(request, response) => {
  }
 })
 
-// add comments API
+// Delete comments API
 //Manage the post request, post url is /comment. 
 app.delete("/comment", async(request, response) => {
   const {comment_index,room_id} = request.body; //decapsulate the data from body package
