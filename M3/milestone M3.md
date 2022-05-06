@@ -40,8 +40,54 @@
 *  Search Engine -- Search any information about the apartments.
 *  Favourite List -- Add anything that users are interested in.
 
+# User Interface
+### HengHuang:
+**►This is the main page.**
 
+![image](https://user-images.githubusercontent.com/90345005/167098071-0b14616c-1e99-4a7f-a754-d19493baebde.png)
 
+**►We are tyring to help users to create thier account to log in our Web. The corresponding API is /user/login.**
+
+![Create](https://user-images.githubusercontent.com/73546677/163453778-ab960f2b-1df1-4d53-b2b1-05150b8ec7db.png)
+
+**►Absolutely, the account for SIGN UP needs to be updated or created when it is necessary. The corresponding API is /user/update.** 
+
+![delete/read](https://user-images.githubusercontent.com/73546677/163453787-40a3405e-5e12-49b6-a954-ca5c2d93e330.png)
+
+**►After user log in, he/she can update ,log out and check what his/her favorite apertments are** 
+
+![image](https://user-images.githubusercontent.com/90345005/167097700-6bb5b7d8-8072-4b81-ba3e-c11e90f1526a.png)
+
+**►After signing up, users can easily use our web to search any apertments they want. The corresponding API is /user/search.** 
+
+![Search/read](https://user-images.githubusercontent.com/73546677/163453780-90c1a14c-b89d-4c88-8931-df055e4855da.png)
+
+**►Addtionally, they can readly add the one they are interested in into their Favourite, which is the sign of "STAR---★". They picture below are briefly show how does it look like. The corresponding API is /user/read/add/update/delete.** 
+
+![Update](https://user-images.githubusercontent.com/73546677/163453784-84db3c39-dd49-45b1-b6a1-31aa6043dd8f.png)
+### Rui Wang:
+**►The user can add their comments in the bottom of our webpage.**
+![KPcommentsShow](https://user-images.githubusercontent.com/78442520/163698092-4f524ae6-fd05-4e88-ad7a-f221deeb43a3.PNG)
+
+**►Details of the apartment introduction in our webpage.**
+![DETAIL1](https://user-images.githubusercontent.com/78442520/164131182-c46fa684-7053-4891-aaea-0d4eff373505.PNG)
+![DETAIL2](https://user-images.githubusercontent.com/78442520/164131199-71ac1b87-c35f-4b9d-8f46-114e9589468c.PNG)
+
+### Junming Li
+**►People can like/dislike the apartment to show their preferences.**
+![7bbf6c24cc5892e2a7446cdb0b74934](https://user-images.githubusercontent.com/98610173/163722722-dca3b652-01bb-424c-923a-e48b7c2084ae.png)
+### JY:
+**►I set up a better interface and consummate the function for sign up. The corresponding API is /user/create.**
+
+![signup](https://user-images.githubusercontent.com/90345005/163463073-2d8b09ad-a05e-46ad-912b-9d8846943bcb.jpg)
+
+**►I also consummate the function for log in.If we sign up, we should have a page to log in. The corresponding API is /user/login.**
+
+<img width="960" alt="login" src="https://user-images.githubusercontent.com/90345005/163463114-66e23937-e8a3-4a4b-b640-50bf8d12082c.png">
+
+**►I also update the inteface consummate the function for this part. After login, users can update to his account infomation page to change the infomation that he want to change, example would be like Name. User doesn't have 4 pages because the Update and Delete is in the same page. The corresponding API is /user/changename and /user/deleteaccount.**
+
+<img width="960" alt="userinfo" src="https://user-images.githubusercontent.com/90345005/163463172-fdf34758-b31e-42e1-a8e0-97b7b6d2131a.png">
 
 # Representation of APIs 
 
