@@ -73,6 +73,10 @@
 **►The user can add their comments in the bottom of our webpage.**
 ![KPcommentsShow](https://user-images.githubusercontent.com/78442520/163698092-4f524ae6-fd05-4e88-ad7a-f221deeb43a3.PNG)
 
+**►The user without login cannot add their comments in the bottom of our webpage.**
+![Notlog](https://user-images.githubusercontent.com/78442520/167226364-f2b351e4-bfb8-4fc8-9195-0161d75d9276.PNG)
+
+
 **►The user can delete their comments in the bottom of our webpage.**
 ![delete](https://user-images.githubusercontent.com/78442520/167225893-479988e4-1af0-4476-8bd8-779649e83ba0.png)
 
