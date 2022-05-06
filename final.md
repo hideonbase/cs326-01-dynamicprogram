@@ -1,6 +1,8 @@
 # TEAM NAME
 * Dynamicprogram
 ---
+# Semester: Spring 2022
+---
 # WEB APPLICATION NAME
 * Amherstbnb
 ---
