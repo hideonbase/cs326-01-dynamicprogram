@@ -168,7 +168,7 @@
 1. Now the user can delete the comments on the four details websites.
 2. Fixed the bug for non registered users can give review to apartments.
 3. A database is created to store user comments, which is associated with the account created by the user.As users, they can add and subtract comments (their own) from each different page.An unregistered user cannot perform any operation.
-4. The paths for all four house types are stored in the SQL database.Meet the project requirements of M3.
+4. The paths for all four house types are stored in the SQL database. Meet the project requirements of M3.
 5. Improved API and fixed some bugs.
 6. Help merging the project with with group members. 
 
