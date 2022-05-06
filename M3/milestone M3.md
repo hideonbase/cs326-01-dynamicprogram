@@ -85,6 +85,8 @@
 ![DETAIL1](https://user-images.githubusercontent.com/78442520/164131182-c46fa684-7053-4891-aaea-0d4eff373505.PNG)
 ![DETAIL2](https://user-images.githubusercontent.com/78442520/164131199-71ac1b87-c35f-4b9d-8f46-114e9589468c.PNG)
 
+
+
 ### Junming Li
 **►People can like/dislike the apartment to show their preferences.**
 ![7bbf6c24cc5892e2a7446cdb0b74934](https://user-images.githubusercontent.com/98610173/163722722-dca3b652-01bb-424c-923a-e48b7c2084ae.png)
@@ -122,6 +124,16 @@
 
 ![image](https://user-images.githubusercontent.com/90345005/167099423-72676c00-b14e-4649-b22b-67d72d88e64d.png)
 * First we have apartment which is house, it has the name, address, rent and the image. Second we have a customer who can sign up and login with the username and the password. The last one is favorite, that means the customer can mark down the favorite apartment. As you see all the tables have id fields, that is the connects between the customer and the apartment, because we want to identify which customer has their own favorite apartment.
+
+### Rui Wang
+
+* I add comment table and house_details tablefor our database.
+<img width="1840" alt="SQLall" src="https://user-images.githubusercontent.com/78442520/167226664-710924f6-ca08-400d-b319-5dbb5dd2ff5f.png">
+<img width="1840" alt="house_details" src="https://user-images.githubusercontent.com/78442520/167226712-b1784ac8-473d-4548-9125-13d459a2180e.png">
+<img width="1840" alt="house_details2" src="https://user-images.githubusercontent.com/78442520/167226722-97da18ed-9812-4cac-bb6c-804cc15f8618.png">
+<img width="1840" alt="comment" src="https://user-images.githubusercontent.com/78442520/167226726-5d7d3296-5eb1-42e0-bbe1-d47919546e29.png">
+<img width="1840" alt="comment2" src="https://user-images.githubusercontent.com/78442520/167226732-575f9658-4569-41c8-991e-5f1f85509fb6.png">
+
 
 
 ## URL Routes/Mappings
