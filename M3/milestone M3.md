@@ -1,8 +1,11 @@
-# TEAM NAME
+# TEAM NAME/Title
 * Dynamicprogram
 ---
-# WEB APPLICATION NAME
+# WEB APPLICATION NAME/Subtitle
 * Amherstbnb
+---
+# Semester
+* Spring 2022
 ---
 # Team Member
 * Heng Huang , HengHuang123
@@ -111,6 +114,17 @@
 
 ![image](https://user-images.githubusercontent.com/90345005/167099423-72676c00-b14e-4649-b22b-67d72d88e64d.png)
 * First we have apartment which is house, it has the name, address, rent and the image. Second we have a customer who can sign up and login with the username and the password. The last one is favorite, that means the customer can mark down the favorite apartment. As you see all the tables have id fields, that is the connects between the customer and the apartment, because we want to identify which customer has their own favorite apartment.
+
+
+## URL Routes/Mappings
+
+| URL Route               | Description                                           | Authentication?                                                 |
+|-------------------------|-------------------------------------------------------|-----------------------------------------------------------------|
+| /                       | This is the main page                                 | None                                                            |
+| /signin/index.html      | The page for user to log in                           | None                                                            |
+| /signup/signup.html     | This is the create account page                       | None                                                            |
+| /userinfo/imUser.html   | Routes to the Apartment Creation Page                 | This is only when the user successfully log in                  |
+
 
 # The Division of Labor
 ### Jianye Nie:
