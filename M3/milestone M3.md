@@ -50,7 +50,22 @@
 
 
 # The Division of Labor
+### Jianye Nie:
+1. 
 
+
+### Heng Huang: 
+1. 
+
+
+### Rui Wang:
+
+1. Now the user can delete the comments on the four details websites.
+2. Fixed the bug for non registered users can give review to apartments.
+3. 
+
+### Junming Li:
+1. 
 
 # The URL of your Heroku Application
 ### https://ms-bnb-03.herokuapp.com
