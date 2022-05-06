@@ -3,6 +3,9 @@
 ---
 # Semester: Spring 2022
 ---
+# User Interface:
+* (A final up-to-date list/table describing your application’s user interface. This should include the name of the UI view and its purpose. You should include a screenshot of each of your UI views.)
+---
 # WEB APPLICATION NAME
 * Amherstbnb
 ---
