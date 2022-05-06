@@ -14,7 +14,7 @@
 * To meet the housing needs of college students, our team plans to coordinate the demand analysis and development and design of the housing rental mini-program and be responsible for connecting with customers and marketing, such as promoting around the campus, raising project funds, and other key development of apartments around the campus, discussing cooperation and communication with major developers and property developers.
 ---
 # Important Data
-* The Sign-in and Sign-up stores users' information and data.
+* The Sign-in and Sign-up stores users' information and data, also the user can update his infomations or delete all of his data.
 * The chat section for users to communicate in real-time.
 * The Search section for users to look for the sources they want.
 * The four web pages content, including the specific floor plan of each apartment. If the user clicks the apartment picture, it will jump into another page for the specific details of the apartment. For example, floor plan, rent price, deposit, pet policy, location, and contact information.
