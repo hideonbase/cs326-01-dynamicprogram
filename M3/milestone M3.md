@@ -107,8 +107,10 @@
 ![RW4](https://user-images.githubusercontent.com/78442520/164129557-a6361505-141f-4009-a4a3-5a13fee0f51a.PNG)
 ![APi](https://user-images.githubusercontent.com/98610173/163722588-e481d35a-e254-4b1d-adf8-6560965d5d56.png)
 
-# Four screenshots of client interface 
+# DateBase
 
+![image](https://user-images.githubusercontent.com/90345005/167099423-72676c00-b14e-4649-b22b-67d72d88e64d.png)
+* First we have apartment which is house, it has the name, address, rent and the image. Second we have a customer who can sign up and login with the username and the password. The last one is favorite, that means the customer can mark down the favorite apartment. As you see all the tables have id fields, that is the connects between the customer and the apartment, because we want to identify which customer has their own favorite apartment.
 
 # The Division of Labor
 ### Jianye Nie:
