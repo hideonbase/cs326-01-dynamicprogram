@@ -127,7 +127,7 @@
 
 ### Rui Wang
 
-* I add comment table and house_details tablefor our database.
+* I add comment table and house_details tablefor our database. Comment is related to the customer, the user can add and delete their review for the apartments.
 <img width="1840" alt="SQLall" src="https://user-images.githubusercontent.com/78442520/167226664-710924f6-ca08-400d-b319-5dbb5dd2ff5f.png">
 <img width="1840" alt="house_details" src="https://user-images.githubusercontent.com/78442520/167226712-b1784ac8-473d-4548-9125-13d459a2180e.png">
 <img width="1840" alt="house_details2" src="https://user-images.githubusercontent.com/78442520/167226722-97da18ed-9812-4cac-bb6c-804cc15f8618.png">
