@@ -3,9 +3,6 @@
 ---
 # Semester: Spring 2022
 ---
-# User Interface:
-* (A final up-to-date list/table describing your application’s user interface. This should include the name of the UI view and its purpose. You should include a screenshot of each of your UI views.)
----
 # WEB APPLICATION NAME
 * Amherstbnb
 ---
@@ -17,6 +14,9 @@
 ---
 # Innovative Idea
 * To meet the housing needs of college students, our team plans to coordinate the demand analysis and development and design of the housing rental mini-program and be responsible for connecting with customers and marketing, such as promoting around the campus, raising project funds, and other key development of apartments around the campus, discussing cooperation and communication with major developers and property developers.
+---
+# User Interface:
+* (A final up-to-date list/table describing your application’s user interface. This should include the name of the UI view and its purpose. You should include a screenshot of each of your UI views.)
 ---
 # Important Data
 * The Sign-in and Sign-up stores users' information and data.
