@@ -112,12 +112,20 @@
 
 # The Division of Labor
 ### Jianye Nie:
-1. 
+1. Set up the page for user to create an account for using the website.
+2. Set up the page for user to login.
+3. Set up the page for user to update his/her infomation and store the important component such as favorite apartment.
+4. Set up a dangerous button for user to delete his/her account.
+5. Assist Heng Huang to merge the project.
 
 
 ### Heng Huang: 
-1. 
-
+1. Optimize the use of log in and sign up. Only people who sign up can log in our Web to look for the apartment. 
+2. Add the UPDATE to user sign up.
+3. Add a SEARCH, which is beneficial to search what user want.
+4. Add a FAVORITE, which users can add the apartments their like into the lists folder.
+5. Merging all the codes together into a big project.
+6. Depoly to Heroku
 
 ### Rui Wang:
 
