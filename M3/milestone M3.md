@@ -131,23 +131,34 @@
 
 
 
-## URL Routes/Mappings
+# URL Routes/Mappings
 
 | URL Route               | Description                                           | Authentication?                                                 |
 |-------------------------|-------------------------------------------------------|-----------------------------------------------------------------|
 | /                       | This is the main page                                 | None                                                            |
 | /signin/index.html      | The page for user to log in                           | None                                                            |
 | /signup/signup.html     | This is the create account page                       | None                                                            |
-| /userinfo/imUser.html   | Routes to the Apartment Creation Page                 | This is only when the user successfully log in                  |
+| /userinfo/imUser.html   | This is the page to check the info about user         | This is only when the user successfully log in                  |
+| /favourite.html         | This page shows user's favorite house                 | This is only when the user successfully log in                  |
+| /details.html?room_id=1 | This is the page for room 1                           | none                                                            |
+| /details.html?room_id=2 | This is the page for room 2                           | none                                                            |
+| /details.html?room_id=3 | This is the page for room 3                           | none                                                            |
+| /details.html?room_id=4 | This is the page for room 4                           | none                                                            |
 
-
+# Authentication/Authorization
+* we have something called id. When user create an account, he has his own id. When the users are viewing the page. Those pages will check if the user has a id. If he can go to the /details.html?room_id=1(or2,3,4) to write comment. 
+![KPcommentsShow](https://user-images.githubusercontent.com/78442520/163698092-4f524ae6-fd05-4e88-ad7a-f221deeb43a3.PNG)
+* Route to /userinfo/imUser.html to change the infomations depends on the id.
+ <img width="960" alt="userinfo" src="https://user-images.githubusercontent.com/90345005/163463172-fdf34758-b31e-42e1-a8e0-97b7b6d2131a.png">
+* Got to /favourite.html to check the favorite apartment.
+ ![image](https://user-images.githubusercontent.com/90345005/167097700-6bb5b7d8-8072-4b81-ba3e-c11e90f1526a.png)
 # The Division of Labor
 ### Jianye Nie:
 1. Set up the page for user to create an account for using the website.
 2. Set up the page for user to login.
-3. Set up the page for user to update his/her infomation and store the important component such as favorite apartment.
+3. Set up the page for user to update his/her infomation.
 4. Set up a dangerous button for user to delete his/her account.
-5. Assist Heng Huang to merge the project.
+5. Merging all the code together into a big project.
 
 
 ### Heng Huang: 
