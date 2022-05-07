@@ -33,14 +33,12 @@
    ### 1. Main Web
    ### 2. Web Browser
    ### 3. User Profiles 
-   ### 4. Box Chatting
-   ### 5. Search Engine 
-   ### 6. Favourite List
+   ### 4. Search Engine 
+   ### 5. Favourite List
 
  
 *  Main Web/Web Browser -- For any users who browse our website for house renting.
 *  User profiles contains and shows user's personal information, each user has the unique user id. Also they can have other infomation that they want to store.
-*  Box Chatting -- For users better connect with agents if they need.
 *  Search Engine -- Search any information about the apartments.
 *  Favourite List -- Add anything that users are interested in.
 
