@@ -186,7 +186,7 @@
 5. Contribute to the final video production. 
 
 # Conclusion
-* The most important thing, we learned how to use javascript, html and css to create our own website. Now we know how to implement CRUD, upload to heroku and combine the database. Those things are not easy to implement, because each of us is writing different code, which is really hard to merge at the end of the project. However we finally did it.
+* The most important thing, we learned how to use javascript, html and css to create our own website. Now we know how to implement CRUD, upload to heroku and combine the database. Those things are not easy to implement, because each of us is writing different code, which is really hard to merge at the end of the project. For example, Jianye is making database for storing the user. Huangheng and RuiWang wants to use the database to get the user id to implement their own function. Which means that we need a lot of communications between each member to make the things easizer to run.Also, we consider our project is not perfect when we comparing the other website that we see in the internet. We realize that the perfect website is not just CRUD, it needs more than that. However we starts our first step and understand how to make it better in the future.
 
 # The URL of your Heroku Application
 ### https://ms-bnb-03.herokuapp.com
