@@ -148,10 +148,11 @@
 # Authentication/Authorization
 * we have something called id. When user create an account, he has his own id. When the users are viewing the page. Those pages will check if the user has a id. If he can go to the /details.html?room_id=1(or2,3,4) to write comment. 
 ![KPcommentsShow](https://user-images.githubusercontent.com/78442520/163698092-4f524ae6-fd05-4e88-ad7a-f221deeb43a3.PNG)
-* Route to /userinfo/imUser.html to change the infomations depends on the id.
- <img width="960" alt="userinfo" src="https://user-images.githubusercontent.com/90345005/163463172-fdf34758-b31e-42e1-a8e0-97b7b6d2131a.png">
+* Route to /userinfo/imUser.html to change the infomations depends on the id!
+!<img width="960" alt="userinfo" src="https://user-images.githubusercontent.com/90345005/163463172-fdf34758-b31e-42e1-a8e0-97b7b6d2131a.png">
 * Got to /favourite.html to check the favorite apartment.
- ![image](https://user-images.githubusercontent.com/90345005/167097700-6bb5b7d8-8072-4b81-ba3e-c11e90f1526a.png)
+![Update](https://user-images.githubusercontent.com/73546677/163453784-84db3c39-dd49-45b1-b6a1-31aa6043dd8f.png)
+ 
 # The Division of Labor
 ### Jianye Nie:
 1. Set up the page for user to create an account for using the website.
