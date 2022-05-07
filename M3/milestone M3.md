@@ -120,14 +120,9 @@
 ![RW4](https://user-images.githubusercontent.com/78442520/164129557-a6361505-141f-4009-a4a3-5a13fee0f51a.PNG)
 ![APi](https://user-images.githubusercontent.com/98610173/163722588-e481d35a-e254-4b1d-adf8-6560965d5d56.png)
 
-# DateBase
+# DataBase
 
-![image](https://user-images.githubusercontent.com/90345005/167099423-72676c00-b14e-4649-b22b-67d72d88e64d.png)
-* First we have apartment which is house, it has the name, address, rent and the image. Second we have a customer who can sign up and login with the username and the password. The last one is favorite, that means the customer can mark down the favorite apartment. As you see all the tables have id fields, that is the connects between the customer and the apartment, because we want to identify which customer has their own favorite apartment.
-
-### Rui Wang
-
-* I add comment table and house_details tablefor our database. Comment is related to the customer, the user can add and delete their review for the apartments.
+*First we have apartment which is house, it has the name, address, rent and the image. Second we have a customer who can sign up and login with the username and the password. The last one is favorite, that means the customer can mark down the favorite apartment. As you see all the tables have id fields, that is the connects between the customer and the apartment, because we want to identify which customer has their own favorite apartment. Comment is related to the customer, the user can add and delete their review for the apartments. Also, you need the id to shows which user gives the comment and the room_id is checking which apartment that the user is giving the comment to. There is a strange thing for house_details table, it has an id field. That id field is for checking which user is viewing the apartment page.
 <img width="1840" alt="SQLall" src="https://user-images.githubusercontent.com/78442520/167226664-710924f6-ca08-400d-b319-5dbb5dd2ff5f.png">
 <img width="1840" alt="house_details" src="https://user-images.githubusercontent.com/78442520/167226712-b1784ac8-473d-4548-9125-13d459a2180e.png">
 <img width="1840" alt="house_details2" src="https://user-images.githubusercontent.com/78442520/167226722-97da18ed-9812-4cac-bb6c-804cc15f8618.png">
