@@ -119,6 +119,7 @@
 ![RW3](https://user-images.githubusercontent.com/78442520/164129547-cbefefda-db71-49d8-9422-c50f4e479f03.PNG)
 ![RW4](https://user-images.githubusercontent.com/78442520/164129557-a6361505-141f-4009-a4a3-5a13fee0f51a.PNG)
 ![APi](https://user-images.githubusercontent.com/98610173/163722588-e481d35a-e254-4b1d-adf8-6560965d5d56.png)
+![API](https://user-images.githubusercontent.com/78442520/167239615-77443dcb-2100-4631-9fd8-19558f571a4c.PNG)
 
 # DataBase
 
@@ -159,9 +160,8 @@
 2. Set up the page for user to login.
 3. Set up the page for user to update his/her infomation.
 4. Set up a dangerous button for user to delete his/her account.
-5. Construct the back-end to store all the users and his/her infomations.
-6. Merging all the code together into a big project.
-
+5. Merging all the code together into a big project.
+6. Help group member made the final video.
 
 ### Heng Huang: 
 1. Optimize the use of log in and sign up. Only people who sign up can log in our Web to look for the apartment. 
@@ -175,16 +175,17 @@
 
 1. Now the user can delete the comments on the four details websites.
 2. Fixed the bug for non registered users can give review to apartments.
-3. A database is created to store user comments, which is associated with the account created by the user.As users, they can add and subtract comments (their own) from each different page.An unregistered user cannot perform any operation.
+3. A database is created to store user comments, which is associated with the account created by the user. As users, they can add and subtract comments (their own) from each different page. An unregistered user cannot perform any operation.
 4. The paths for all four house types are stored in the SQL database. Meet the project requirements of M3.
-5. Improved API and fixed some bugs.
-6. Help merging the project with with group members. 
+5. Help merging the project with with group members. 
+6. Design the production process of final video.
 
 ### Junming Li:
 1. Add new css/html feature to the page.
 2. Follow Heng Huang's instructions to assist the project.
 3. The number of clicks liked/disliked by users for the four different apartments is calculated.
-4. Adding 4 different API on the like/dislike(In the code folder need to merge). 
+4. Adding 4 different API on the like/dislike(In the code folder need to merge).
+5. Contribute to the final video production. 
 
 # The URL of your Heroku Application
 ### https://ms-bnb-03.herokuapp.com
