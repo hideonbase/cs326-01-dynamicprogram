@@ -30,11 +30,11 @@
 
 ### Elements:
 
-   ### 1. Main Web
-   ### 2. Web Browser
-   ### 3. User Profiles 
-   ### 4. Search Engine 
-   ### 5. Favourite List
+   ### a). Main Web
+   ### b). Web Browser
+   ### c). User Profiles 
+   ### d). Search Engine 
+   ### e). Favourite List
 
  
 *  Main Web/Web Browser -- For any users who browse our website for house renting.
