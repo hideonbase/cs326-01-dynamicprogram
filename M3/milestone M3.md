@@ -159,7 +159,8 @@
 2. Set up the page for user to login.
 3. Set up the page for user to update his/her infomation.
 4. Set up a dangerous button for user to delete his/her account.
-5. Merging all the code together into a big project.
+5. Construct the back-end to store all the users and his/her infomations.
+6. Merging all the code together into a big project.
 
 
 ### Heng Huang: 
