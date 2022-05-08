@@ -45,9 +45,9 @@ FROM comment
 WHERE id = 6;
 ```
 
-# 打开步骤
-1. 运行`npm install`
-2. 运行`createdb dev`*
-3. 运行`psql -U dev -d dev -f ./dev.out`
-4. 启动项目`npm run start`
-5. 打开`http://localhost:5000`
+# Process to open
+1. Run`npm install`
+2. Run`createdb dev`*
+3. Run`psql -U dev -d dev -f ./dev.out`
+4. Start the project`npm run start`
+5. Open`http://localhost:5000`
