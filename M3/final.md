@@ -85,7 +85,7 @@
 ![DETAIL2](https://user-images.githubusercontent.com/78442520/164131199-71ac1b87-c35f-4b9d-8f46-114e9589468c.PNG)
 
  **However, we've me some issue when we are merging our code. It cannot be upload to the heroku for certain reason. Hence, this function will not be present
- in the video. It works in the local, my teammates said that is because the error in the database code which is conflict to the heroku. **
+ in the video. It works in the local, my teammates said that is because the error in the database code which is conflict to the heroku. You can go to file 2022-05-06 pro in M3 and open this. All the function of our website is work in local. I think the reason why this thing happen is because the merge issue. I discuss all the code with the group members and show how it run, everything looks fine. However, I was not work on the merge part and I think I should pay attention on this. This is a mistake. **
 
 ### Junming Li
 **►People can like/dislike the apartment to show their preferences.**
