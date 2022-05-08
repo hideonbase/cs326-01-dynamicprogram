@@ -192,6 +192,6 @@ Added:
 * The most important thing, we learned how to use javascript, html and css to create our own website. Now we know how to implement CRUD, upload to heroku and combine the database. Those things are not easy to implement, because each of us is writing different code, which is really hard to merge at the end of the project. For example, Jianye is making database for storing the user. Huangheng and RuiWang wants to use the database to get the user id to implement their own function. Somehow，everything worked as expected in the pages coded by Junming, but difficulties were encountered when merging with the rest of the code in Heroku. We decided not to launch this page. However, this decision does not contradict our mission to build a neat and efficient rental site for Umass students. It just means that, we need a lot of communications between each member to make the things easizer to run. Also, we consider our project is not perfect when we comparing the other website that we see in the internet. We realize that the perfect website is not just CRUD, it needs more than that. However we starts our first step and understand how to make it better in the future.
 
 # The URL of your Heroku Application
-### https://ms-bnb-03.herokuapp.com
+### https://ms-bnb-03.herokuapp.com 
 ### https://dashboard.heroku.com/apps/amherstbnb/deploy/heroku-git
 
