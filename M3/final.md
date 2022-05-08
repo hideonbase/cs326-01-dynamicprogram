@@ -68,6 +68,7 @@
 
 ![Update](https://user-images.githubusercontent.com/73546677/163453784-84db3c39-dd49-45b1-b6a1-31aa6043dd8f.png)
 ### Rui Wang:
+
 **►The user can add their comments in the bottom of our webpage.**
 ![KPcommentsShow](https://user-images.githubusercontent.com/78442520/163698092-4f524ae6-fd05-4e88-ad7a-f221deeb43a3.PNG)
 
@@ -83,7 +84,8 @@
 ![DETAIL1](https://user-images.githubusercontent.com/78442520/164131182-c46fa684-7053-4891-aaea-0d4eff373505.PNG)
 ![DETAIL2](https://user-images.githubusercontent.com/78442520/164131199-71ac1b87-c35f-4b9d-8f46-114e9589468c.PNG)
 
-
+ **However, we've me some issue when we are merging our code. It cannot be upload to the heroku for certain reason. Hence, this function will not be present
+ in the video. It works in the local, my teammates said that is because the error in the database code which is conflict to the heroku. **
 
 ### Junming Li
 **►People can like/dislike the apartment to show their preferences.**
