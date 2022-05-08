@@ -193,5 +193,4 @@ Added:
 
 # The URL of your Heroku Application
 ### https://ms-bnb-03.herokuapp.com 
-### https://dashboard.heroku.com/apps/amherstbnb/deploy/heroku-git
 
