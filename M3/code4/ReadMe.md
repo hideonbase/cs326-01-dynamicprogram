@@ -45,11 +45,11 @@ FROM comment
 WHERE id = 6;
 ```
 
-# 打开步骤
-1. 运行`npm install`
+# 打开步骤Process to run
+1. run`npm install`
 2. login postgres default account: {File_path}psql -U postgres -w 
 3. create a new user: CREATE USER dev SUPERUSER LOGIN;
-4. 运行`createdb -U dev dev`*
-5. 运行`psql -U dev -d dev -f ./dev.out`
-6. 启动项目`npm run start`
-7. 打开`http://localhost:5000`
+4. run`createdb -U dev dev`*
+5. run`psql -U dev -d dev -f ./dev.out`
+6. start`npm run start`
+7. open`http://localhost:5000`
