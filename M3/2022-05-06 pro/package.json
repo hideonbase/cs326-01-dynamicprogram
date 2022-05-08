@@ -1,0 +1,17 @@
+{
+    "name": "project2_wangrui",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "type": "module",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "author": "wangrui",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.3",
+        "morgan": "^1.10.0",
+        "pg": "^8.7.3"
+    }
+}

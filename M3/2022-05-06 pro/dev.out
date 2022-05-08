@@ -1,0 +1,442 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 14.2
+-- Dumped by pg_dump version 14.2
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: comment; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.comment (
+    id bigint NOT NULL,
+    content character varying(255),
+    date bigint,
+    room_id bigint NOT NULL,
+    customer_id bigint NOT NULL
+);
+
+
+--
+-- Name: TABLE comment; Type: COMMENT; Schema: public; Owner: -
+--
+
+COMMENT ON TABLE public.comment IS 'comment for room''s details';
+
+
+--
+-- Name: comment_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.comment_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: comment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.comment_id_seq OWNED BY public.comment.id;
+
+
+--
+-- Name: customer; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.customer (
+    id integer NOT NULL,
+    username character varying(30) NOT NULL,
+    password character varying(50) NOT NULL
+);
+
+
+--
+-- Name: customer_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.customer_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: customer_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.customer_id_seq OWNED BY public.customer.id;
+
+
+--
+-- Name: fav; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.fav (
+    id integer NOT NULL,
+    house integer,
+    customer integer
+);
+
+
+--
+-- Name: fav_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.fav_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: fav_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.fav_id_seq OWNED BY public.fav.id;
+
+
+--
+-- Name: house; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.house (
+    id integer NOT NULL,
+    title character varying(50),
+    image character varying(200),
+    rent numeric,
+    address character varying(200)
+);
+
+
+--
+-- Name: house_details; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.house_details (
+    id bigint NOT NULL,
+    details json NOT NULL
+);
+
+
+--
+-- Name: TABLE house_details; Type: COMMENT; Schema: public; Owner: -
+--
+
+COMMENT ON TABLE public.house_details IS 'room details';
+
+
+--
+-- Name: house_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.house_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: house_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.house_id_seq OWNED BY public.house.id;
+
+
+--
+-- Name: room_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.room_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: room_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.room_id_seq OWNED BY public.house_details.id;
+
+
+--
+-- Name: comment id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.comment ALTER COLUMN id SET DEFAULT nextval('public.comment_id_seq'::regclass);
+
+
+--
+-- Name: customer id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.customer ALTER COLUMN id SET DEFAULT nextval('public.customer_id_seq'::regclass);
+
+
+--
+-- Name: fav id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.fav ALTER COLUMN id SET DEFAULT nextval('public.fav_id_seq'::regclass);
+
+
+--
+-- Name: house id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.house ALTER COLUMN id SET DEFAULT nextval('public.house_id_seq'::regclass);
+
+
+--
+-- Name: house_details id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.house_details ALTER COLUMN id SET DEFAULT nextval('public.room_id_seq'::regclass);
+
+
+--
+-- Data for Name: comment; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.comment (id, content, date, room_id, customer_id) FROM stdin;
+1	Kendrick Place is a very convenient apartment for students who from Umass Amherst	1650069009568	1	2
+2	test	1650057275268	1	4
+3	Kendrick Place is a very convenient apartment for students who from Umass Amherst	1650069009568	2	4
+4	test	1650057275268	2	4
+5	test	1650057275268	2	2
+7	test2	1650057275268	3	2
+8	test4	1651865351027	3	4
+\.
+
+
+--
+-- Data for Name: customer; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.customer (id, username, password) FROM stdin;
+2	user002	1234567890
+4	user001	1234567890
+\.
+
+
+--
+-- Data for Name: fav; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.fav (id, house, customer) FROM stdin;
+7	3	4
+9	2	4
+\.
+
+
+--
+-- Data for Name: house; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.house (id, title, image, rent, address) FROM stdin;
+1	House A	/imgs/1.jpg	100	2699 Front St NE, Boardman, OR 97818
+2	House B	/imgs/2.jpg	200	101 Front St NE, Boardman, OR 97818
+3	House C	/imgs/3.jpg	300	202 NW 1st St
+4	House D	/imgs/4.jpg	400	200 City Center Cir, Boardman, OR 97818
+\.
+
+
+--
+-- Data for Name: house_details; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.house_details (id, details) FROM stdin;
+1	{"roomListData": [\n    {\n        "title": "1 Bedroom / 1 Bathroom",\n        "pic": {\n            "url": "imgs/details/KP1B.JPG",\n            "alt": "room 1"\n        },\n        "content": {\n            "rent": "rent: $2,100",\n            "deposit": "$1,945",\n            "beds": "1Be/1Ba",\n            "area": "SQ. FT. 620"\n        }\n    },\n    {\n        "title": "3 Bedroom / 2 Bathroom",\n        "pic": {\n            "url": "imgs/details/KP3B.JPG",\n            "alt": "room 1"\n        },\n        "content": {\n            "rent": "rent: $3,510",\n            "deposit": "deposit: $1,300",\n            "beds": "beds: 3Be/2Ba",\n            "area": "area: SQ. FT. 1,102"\n        }\n    },\n    {\n        "title": "More Images:",\n        "pic": {\n            "url": "imgs/details/KPdetails.PNG",\n            "alt": "room 1"\n        },\n        "content": {\n            "rent": "About Kendrick Place",\n            "deposit": "Kendrick Place - Redefining Luxury Living",\n            "beds": "",\n            "area": "-Kendrick Place is a luxury housing project in the downtown Amherst location! Living in the middle of all the action, you will be able to explore the unique blend of restaurants, shops, and cultural destinations wrapped in a New England charm, all within sight of UMass Amherst. Weare bringing luxury to the next level with floor to ceiling windows, custom window treatments, oak wood style floors and an in-unit washer and dryer. The community also offers ultra-high speed Internet, oncall service and electric key entry."\n        }\n    },\n    {\n        "title": "Community Amenities",\n        "pic": {\n            "url": "imgs/details/KPInc.PNG",\n            "alt": "KPCommunity Amenities"\n        },\n        "content": {\n            "rent": "Unique Features:",\n            "deposit": "Built with sound reducing technology",\n            "beds": "Close to Downtown",\n            "area": "Controlled access"\n        }\n    }\n],\n    "details_data": {\n        "rules": {\n            "title": "Rules",\n            "content": "<p>PETS Allow</p>"\n        },\n        "contact": {\n            "title": "Contact",\n            "content": "<p>Phone 413-241-8995</p><br><p>Email ruiw@umass.edu</p>"\n        },\n        "location": {\n            "title": "Location",\n            "content": "<p>57 E. Pleasant St., Amherst, MA 01002</p>"\n        },\n        "policy": {\n            "title": "Pets Policy",\n            "content": "<p>- Pets are welcome here!</p><br><p>- Maximum of 2 pets per apartment</p><br><p>- There is extra pet-rent of $25 / month, flat - regardless of whether you have 1 or 2 pets</p>"\n        }\n    },\n    "details_data1": {\n        "words": {\n            "title": "User Review",\n            "content": "<p>Add comments here</p>"\n        }\n    }}
+2	{"roomListData": [\n    {\n        "title": "1 Bedroom / 1 Bathroom",\n        "pic": {\n            "url": "imgs/details/AS1B.png",\n            "alt": "room 1"\n        },\n        "content": {\n            "rent": "rent: $2,199",\n            "deposit": "deposit: $1,095",\n            "beds": "beds: 1Bd/1Ba",\n            "area": "area: SQ. FT. 501"\n        }\n    },\n    {\n        "title": "3 Bedroom / 2 Bathroom",\n        "pic": {\n            "url": "imgs/details/AS3B2B.PNG",\n            "alt": "room 2"\n        },\n        "content": {\n            "rent": "rent: $3,874",\n            "deposit": "deposit: $1,095",\n            "beds": "beds: 3Bd/2Ba",\n            "area": "area: SQ. FT. 1,302"\n        }\n    },\n    {\n        "title": "More images",\n        "pic": {\n            "url": "imgs/details/ASP.PNG",\n            "alt": "room 2"\n        },\n        "content": {\n            "rent": "About Aspen Heights: ",\n            "deposit": " ",\n            "beds": "Brand new upscale apartment in Amherst! Conveniently located near UMass Amherst and Amherst College, with one and three bedroom apartments. Each apartment features stainless steel appliances, granite counters and hardwood floors. Our community features a 24/7 fitness center with private office space for working from home or private study.",\n            "area": " "\n        }\n    },\n    {\n        "title": "Community Amenities",\n        "pic": {\n            "url": "imgs/details/ASPfeature.PNG",\n            "alt": "room 2"\n        },\n        "content": {\n            "rent": "Unique Features:",\n            "deposit": "Apartment shuttle service",\n            "beds": "Free parking",\n            "area": "Close to BigY Market"\n        }\n    }\n],\n    "details_data": {\n        "rules": {\n            "title": "Rules",\n            "content": "<p>PETS Allow</p>"\n        },\n        "contact": {\n            "title": "Contact",\n            "content": "<p>Phone 413-241-8995</p><br><p>Email ruiw@umass.edu</p>"\n        },\n        "location": {\n            "title": "Location",\n            "content": "<p>408 Northampton Rd, Amherst, MA 01002</p>"\n        },\n        "policy": {\n            "title": "Pets Policy",\n            "content": "<p>- No dogs over 70lbs and no aggressive breeds including Pit Bulls, Rottweilers, Chow Chows, Doberman Pinschers, wolf-hybrids.</p><br><p>- We will occasionally make some exceptions to these rules.</p><br><p>- If you would like to discuss this further, please call the Aspen Heights phone number on the website. </p>"\n        }\n    },\n    "details_data1": {\n        "words": {\n            "title": "User Review",\n            "content": "<p>Add comments here</p>"\n        }\n    }}
+3	{"roomListData": [\n    {\n        "title": "1 Bedroom / 1 Bathroom",\n        "pic": {\n            "url": "imgs/details/North1B.png",\n            "alt": "room 1"\n        },\n        "content": {\n            "rent": "rent: $2,010",\n            "deposit": "deposit: $1,045",\n            "beds": "beds: 1Bd/1Ba",\n            "area": "area: SQ. FT. 650"\n        }\n    },\n    {\n        "title": "3 Bedroom / 2 Bathroom",\n        "pic": {\n            "url": "imgs/details/North3B.png",\n            "alt": "room 1"\n        },\n        "content": {\n            "rent": "rent: $1,260",\n            "deposit": "deposit: $1,095",\n            "beds": "beds: 3Bd/2Ba",\n            "area": "area: SQ. FT. 1,149"\n        }\n    },\n    {\n        "title": "More images",\n        "pic": {\n            "url": "imgs/details/NorthInner.PNG",\n            "alt": "room 1"\n        },\n        "content": {\n            "rent": "About North Square: ",\n            "deposit": " ",\n            "beds": "North Square Apartments is one of the most luxurious condominiums in the area. Our one, two and three bedroom apartments are designed to make your home a place of comfort and sophistication. Life is great at North Plaza, with convenient retail amenities like Atkins Market and Jakes at the Mill right on your doorstep.",\n            "area": " "\n        }\n    },\n    {\n        "title": "Community Amenities",\n        "pic": {\n            "url": "imgs/details/NSfeature.PNG",\n            "alt": "room 2"\n        },\n        "content": {\n            "rent": "Unique Features:",\n            "deposit": "On Site Retail",\n            "beds": "Dog Park",\n            "area": "Pet Washing Station"\n        }\n    }\n],\n    "details_data": {\n        "rules": {\n            "title": "Rules",\n            "content": "<p>PETS Allow</p>"\n        },\n        "contact": {\n            "title": "Contact",\n            "content": "<p>Phone 855-328-2421</p><br><p>Email ruiw@umass.edu</p>"\n        },\n        "location": {\n            "title": "Location",\n            "content": "<p>75 Cowls Rd., Amherst, MA 01002</p>"\n        },\n        "policy": {\n            "title": "Pets Policy",\n            "content": "<p>- Cats and Dog Allowed</p><br><p>- Rent: $25</p><br><p>- Restrictions: Breed Restrictions Apply. Please call for more details.</p><p>Pet Limit: 2</p><p>Rent: $25</p><p>Restrictions: Breed Restrictions Apply. Please call for more details.</p>"\n        }\n    },\n    "details_data1": {\n        "words": {\n            "title": "User Review",\n            "content": "<p>Add comments here</p>"\n        }\n    }}
+4	{"roomListData": [\n    {\n        "title": "1 Bedroom / 1 Bathroom",\n        "pic": {\n            "url": "imgs/details/1.JPG",\n            "alt": "room 1"\n        },\n        "content": {\n            "rent": "rent: $2,000",\n            "deposit": "deposit: $1,300",\n            "beds": "beds: 1Be/1Ba",\n            "area": "area: SQ. FT. 506"\n        }\n    },\n    {\n        "title": "4 Bedroom / 2 Bathroom",\n        "pic": {\n            "url": "imgs/details/OP4B2B.PNG",\n            "alt": "room 2"\n        },\n        "content": {\n            "rent": "rent: $1,125",\n            "deposit": "deposit: $1,125",\n            "beds": "beds: 4Be/2Ba",\n            "area": "area: SQ. FT. 1307"\n        }\n    },\n    {\n        "title": "More images",\n        "pic": {\n            "url": "imgs/details/OPinner.PNG",\n            "alt": "room 1"\n        },\n        "content": {\n            "rent": "About Olympia Place: ",\n            "deposit": " ",\n            "beds": "Olympia Place offers many types of rooms. Designed for todays students, each apartment features 9 inches+ ceilings, private bedrooms, floor-to-ceiling windows. The ultra-modern kitchen includes stainless steel appliances and Corian countertops, paired with a luxurious bathroom and separate washer/dryer to make you feel right at home. We are owned by the same developer as Kendrick Place, so we can proudly guarantee the level of service provided by this apartment is Amherst first tier.",\n            "area": " "\n        }\n    },\n    {\n        "title": "Community Amenities",\n        "pic": {\n            "url": "imgs/details/OPF.PNG",\n            "alt": "room 2"\n        },\n        "content": {\n            "rent": "Unique Features:",\n            "deposit": "Storeroom",\n            "beds": "Property Manager on Site",\n            "area": "Gameroom"\n        }\n    }\n],\n    "details_data": {\n        "rules": {\n            "title": "Rules",\n            "content": "<p>PETS Allow</p>"\n        },\n        "contact": {\n            "title": "Contact",\n            "content": "<p>Phone 413-241-8995</p><br><p>Email ruiw@umass.edu</p>"\n        },\n        "location": {\n            "title": "Location",\n            "content": "<p>57 Olympia Drive, Amherst, MA 01002</p>"\n        },\n        "policy": {\n            "title": "Pets Policy",\n            "content": "<p>- Dogs and cats are allowed</p><br><p>- Maximum of 2 pets per apartment</p><br><p>- There is extra pet-rent of $25 / month, flat - regardless of whether you have 1 or 2 pets</p>"\n        }\n    },\n    "details_data1": {\n        "words": {\n            "title": "User Review",\n            "content": "<p>Add comments here</p>"\n        }\n    }}
+\.
+
+
+--
+-- Name: comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.comment_id_seq', 14, true);
+
+
+--
+-- Name: customer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.customer_id_seq', 4, true);
+
+
+--
+-- Name: fav_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.fav_id_seq', 9, true);
+
+
+--
+-- Name: house_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.house_id_seq', 4, true);
+
+
+--
+-- Name: room_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.room_id_seq', 4, true);
+
+
+--
+-- Name: comment comment_pk; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.comment
+    ADD CONSTRAINT comment_pk PRIMARY KEY (id);
+
+
+--
+-- Name: customer customer_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.customer
+    ADD CONSTRAINT customer_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: customer customer_username_key; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.customer
+    ADD CONSTRAINT customer_username_key UNIQUE (username);
+
+
+--
+-- Name: fav fav_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.fav
+    ADD CONSTRAINT fav_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: house house_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.house
+    ADD CONSTRAINT house_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: house_details room_pk; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.house_details
+    ADD CONSTRAINT room_pk PRIMARY KEY (id);
+
+
+--
+-- Name: fav unique_house_customer; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.fav
+    ADD CONSTRAINT unique_house_customer UNIQUE (house, customer);
+
+
+--
+-- Name: comment_id_uindex; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX comment_id_uindex ON public.comment USING btree (id);
+
+
+--
+-- Name: room_id_uindex; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX room_id_uindex ON public.house_details USING btree (id);
+
+
+--
+-- Name: comment customer_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.comment
+    ADD CONSTRAINT customer_id FOREIGN KEY (customer_id) REFERENCES public.customer(id);
+
+
+--
+-- Name: fav fav_customer_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.fav
+    ADD CONSTRAINT fav_customer_fkey FOREIGN KEY (customer) REFERENCES public.customer(id);
+
+
+--
+-- Name: fav fav_house_fkey; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.fav
+    ADD CONSTRAINT fav_house_fkey FOREIGN KEY (house) REFERENCES public.house(id);
+
+
+--
+-- Name: comment room_id; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.comment
+    ADD CONSTRAINT room_id FOREIGN KEY (room_id) REFERENCES public.house_details(id);
+
+
+--
+-- Name: TABLE comment; Type: ACL; Schema: public; Owner: -
+--
+
+GRANT SELECT ON TABLE public.comment TO PUBLIC;
+GRANT SELECT ON TABLE public.comment TO dev;
+
+
+--
+-- Name: TABLE house_details; Type: ACL; Schema: public; Owner: -
+--
+
+GRANT SELECT ON TABLE public.house_details TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
